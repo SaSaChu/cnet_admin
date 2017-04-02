@@ -5,6 +5,15 @@
  * @copyright   Copyright (c) 2016 OA Wu Design
  */
 
+if (!function_exists ('redirect_message')) {
+  function redirect_message ($uri, $datas) {
+    if (class_exists ('Session') && $datas)
+      foreach ($datas as $key => $data)
+        Session::setData ($key, $data, true);
+
+    return redirect ($uri, 'refresh');
+  }
+}
 if (!function_exists ('conditions')) {
   function conditions (&$columns, &$configs, $model_name, $inputs = null) {
     $inputs = $inputs === null ? $_GET : $inputs;
@@ -23,6 +32,11 @@ if (!function_exists ('conditions')) {
         'base_url' => base_url (array_merge ($configs, array ($q_string ? '?' . $q_string : '')))
       );
     return $conditions;
+  }
+}
+if (!function_exists ('password')) {
+  function password ($p) {
+    return md5 (md5 ($p));
   }
 }
 if (!function_exists ('column_array')) {
