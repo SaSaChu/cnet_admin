@@ -10,6 +10,9 @@ class Migration_Add_blogs extends CI_Migration {
     $this->db->query (
       "CREATE TABLE `blogs` (
         `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+        `lang_id` int(11) unsigned NOT NULL DEFAULT 0 COMMENT '語系 ID',
+        `menu_id` int(11) unsigned NOT NULL DEFAULT 0 COMMENT 'Menu ID, root = 0',
+        
         `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '' COMMENT '標題',
         `cover` varchar(50) COLLATE utf8_unicode_ci NOT NULL DEFAULT '' COMMENT '封面',
         `content` text NOT NULL COMMENT '內容',

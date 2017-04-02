@@ -23,6 +23,21 @@ class Menu extends OaModel {
   public function __construct ($attributes = array (), $guard_attributes = true, $instantiating_via_find = false, $new_record = true) {
     parent::__construct ($attributes, $guard_attributes, $instantiating_via_find, $new_record);
   }
+  public static function alls () {
+    return array_map (function ($menu) {
+        return array (
+            'id' => $menu->id,
+            'name' => $menu->name,
+            'lang' => $menu->lang_id,
+            'subs' => array_map (function ($sub) {
+              return array (
+                  'id' => $sub->id,
+                  'name' => $sub->name,
+                );
+            }, $menu->subs)
+          );
+      }, Menu::all (array ('select' => 'id, name, lang_id, menu_id', 'include' => array ('subs'), 'conditions' => array ('menu_id = ?', 0))));
+  }
   public function destroy () {
     if ($this->subs)
       foreach ($this->subs as $sub)

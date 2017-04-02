@@ -5,6 +5,35 @@
  * @copyright   Copyright (c) 2016 OA Wu Design
  */
 
+if (!function_exists ('remove_ckedit_tag')) {
+  function remove_ckedit_tag ($text) {
+    return preg_replace ("/\s+/", "", preg_replace ("/&#?[a-z0-9]+;/i", "", str_replace ('▼', '', str_replace ('▲', '', trim (strip_tags ($text))))));
+  }
+}
+
+if (!function_exists ('is_upload_image_format')) {
+  function is_upload_image_format ($file, $check_size = 0, $types = array ()) {
+    if (!(isset ($file['name']) && isset ($file['type']) && isset ($file['tmp_name']) && isset ($file['error']) && isset ($file['size'])))
+      return false;
+
+    if ($check_size && !(is_numeric ($file['size']) && $file['size'] > 0)) return false;
+    if (!$types) return true;
+
+    $CI =& get_instance ();
+    $CI->config->load ('mimes');
+    $mimes = $CI->config->item ('mimes');
+    foreach ($types as $type)
+      if (isset ($mimes[$type]))
+        if (is_string ($mimes[$type])) {
+          if ($mimes[$type] == $file['type']) return true;
+        } else if (is_array ($mimes[$type])) {
+          foreach ($mimes[$type] as $mime)
+            if ($mime == $file['type']) return true;
+        }
+
+    return false;
+  }
+}
 if (!function_exists ('redirect_message')) {
   function redirect_message ($uri, $datas) {
     if (class_exists ('Session') && $datas)
