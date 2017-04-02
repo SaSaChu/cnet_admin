@@ -13,7 +13,7 @@ class Langs extends Admin_controller {
   public function __construct () {
     parent::__construct ();
     
-    $this->uri_1 = 'admin/menus';
+    $this->uri_1 = 'admin/langs';
 
     if (in_array ($this->uri->rsegments (2, 0), array ('edit', 'update', 'destroy')))
       if (!(($id = $this->uri->rsegments (3, 0)) && ($this->obj = Lang::find ('one', array ('conditions' => array ('id = ?', $id))))))

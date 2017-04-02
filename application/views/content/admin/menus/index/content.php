@@ -45,6 +45,7 @@
         <tr>
           <th width='80'>#</th>
           <th >名稱</th>
+          <th width='100'>語系</th>
           <th width='100'>子選單數</th>
           <th width='50' class='right'>排序</th>
           <th width='105' class='right'>子項/修改/刪除</th>
@@ -56,7 +57,9 @@
             <tr>
               <td><?php echo $obj->id;?></td>
               <td><?php echo $obj->name;?></td>
+              <td><?php echo $obj->lang->name;?></td>
               <td><?php echo count ($obj->subs);?></td>
+
               <td class='right sort_btns'>
                 <a class='icon-tu' href='<?php echo base_url ($uri_1, $obj->id, 'sort', 'up');?>' data-method='post'></a>
                 <a class='icon-td' href='<?php echo base_url ($uri_1, $obj->id, 'sort', 'down');?>' data-method='post'></a>
@@ -72,7 +75,7 @@
     <?php }
         } else { ?>
           <tr>
-            <td colspan='5' class='no_data'>沒有任何資料。</td>
+            <td colspan='7' class='no_data'>沒有任何資料。</td>
           </tr>
   <?php } ?>
       </tbody>

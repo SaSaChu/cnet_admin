@@ -33,7 +33,7 @@ class Menus extends Admin_controller {
 
     $limit = 25;
     $total = Menu::count (array ('conditions' => $conditions));
-    $objs = Menu::find ('all', array ('offset' => $offset < $total ? $offset : 0, 'limit' => $limit, 'order' => 'sort DESC', 'include' => array ('subs'), 'conditions' => $conditions));
+    $objs = Menu::find ('all', array ('offset' => $offset < $total ? $offset : 0, 'limit' => $limit, 'order' => 'sort DESC', 'include' => array ('subs', 'lang'), 'conditions' => $conditions));
 
     return $this->load_view (array (
         'objs' => $objs,
@@ -123,7 +123,10 @@ class Menus extends Admin_controller {
   }
   private function _validation_create (&$posts) {
     if (!isset ($posts['name'])) return '沒有填寫 名稱！';
+    if (!isset ($posts['lang_id'])) return '沒有填寫 語系！';
+
     if (!(is_string ($posts['name']) && ($posts['name'] = trim ($posts['name'])))) return '名稱 格式錯誤！';
+    if (!(is_numeric ($posts['lang_id']) && ($posts['lang_id'] = trim ($posts['lang_id'])) && Lang::find_by_id ($posts['lang_id']))) return '語系 格式錯誤！';
     return '';
   }
   private function _validation_update (&$posts) {

@@ -10,6 +10,7 @@ class Migration_Add_menus extends CI_Migration {
     $this->db->query (
       "CREATE TABLE `menus` (
         `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+        `lang_id` int(11) unsigned NOT NULL DEFAULT 0 COMMENT '語系 ID',
         `menu_id` int(11) unsigned NOT NULL DEFAULT 0 COMMENT 'Menu ID, root = 0',
         `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '' COMMENT '名稱',
         `sort` int(11) unsigned NOT NULL DEFAULT 0 COMMENT '排列順序，上至下 DESC',
