@@ -359,7 +359,7 @@ $changeWidth: 768px;
       display: inline-block;
       width: 30px;
       height: 30px;
-      line-height: 30px;
+      line-height: 30px - 2px;
 
       border: 1px solid rgba(236, 240, 241, 1.00);
       text-align: center;

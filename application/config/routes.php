@@ -8,3 +8,8 @@ Route::get ('/login', 'platform@login');
 Route::get ('/logout', 'platform@logout');
 Route::get ('/platform/index', 'platform@login');
 Route::get ('/platform', 'platform@login');
+
+Route::group ('admin', function () {
+  Route::resourcePagination (array ('menus'), 'menus');
+  Route::resourcePagination (array ('menu', 'menus'), 'menu_menus');
+});

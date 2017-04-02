@@ -18,8 +18,8 @@
         <div id='left_side'>
           
           <header>
-            <a href='<?php echo base_url ();?>'>Ｚ</a>
-            <span>Zeus Design Studio!</span>
+            <a href='<?php echo base_url ();?>'>C</a>
+            <span>CNET!</span>
           </header>
 
           <div id='login_user'>
@@ -39,6 +39,10 @@
                 <span class='icon-u'>管理區</span>
                 <ul>
                   <li><a href="<?php echo $url = base_url ('admin');?>" class='icon-se<?php echo $now_url == $url ? ' active' : '';?>'>後台首頁</a></li>
+                  <li><a href="<?php echo $url = base_url ('admin', 'blogs');?>" class='icon-se<?php echo $now_url == $url ? ' active' : '';?>'>最新消息</a></li>
+                  <li><a href="<?php echo $url = base_url ('admin', 'menus');?>" class='icon-se<?php echo $now_url == $url ? ' active' : '';?>'>選單列表</a></li>
+                  <li><a href="<?php echo $url = base_url ('admin', 'products');?>" class='icon-se<?php echo $now_url == $url ? ' active' : '';?>'>產品管理</a></li>
+                  <li><a href="<?php echo $url = base_url ('admin', 'langs');?>" class='icon-se<?php echo $now_url == $url ? ' active' : '';?>'>語系管理</a></li>
                 </ul>
               </label>
             </li>
@@ -61,7 +65,7 @@
       <?php echo isset ($content) ? $content : ''; ?>
           </div>
           <div id='bottom_side'>
-            後台版型設計 by 宙思 <a href='http://www.ioa.tw/' target='_blank'>OA Wu</a>
+            後台版型設計 by <a href='https://www.zeusdesign.com.tw/' target='_blank'>宙思</a>
           </div>
         </div>
       </div>
