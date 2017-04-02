@@ -39,10 +39,10 @@
                 <span class='icon-u'>管理區</span>
                 <ul>
                   <li><a href="<?php echo $url = base_url ('admin');?>" class='icon-se<?php echo $now_url == $url ? ' active' : '';?>'>後台首頁</a></li>
-                  <li><a href="<?php echo $url = base_url ('admin', 'blogs');?>" class='icon-se<?php echo $now_url == $url ? ' active' : '';?>'>最新消息</a></li>
-                  <li><a href="<?php echo $url = base_url ('admin', 'menus');?>" class='icon-se<?php echo $now_url == $url ? ' active' : '';?>'>選單列表</a></li>
-                  <li><a href="<?php echo $url = base_url ('admin', 'products');?>" class='icon-se<?php echo $now_url == $url ? ' active' : '';?>'>產品管理</a></li>
                   <li><a href="<?php echo $url = base_url ('admin', 'langs');?>" class='icon-se<?php echo $now_url == $url ? ' active' : '';?>'>語系管理</a></li>
+                  <li><a href="<?php echo $url = base_url ('admin', 'menus');?>" class='icon-se<?php echo $now_url == $url ? ' active' : '';?>'>選單列表</a></li>
+                  <li><a href="<?php echo $url = base_url ('admin', 'blogs');?>" class='icon-se<?php echo $now_url == $url ? ' active' : '';?>'>最新消息</a></li>
+                  <li><a href="<?php echo $url = base_url ('admin', 'products');?>" class='icon-se<?php echo $now_url == $url ? ' active' : '';?>'>產品管理</a></li>
                 </ul>
               </label>
             </li>
