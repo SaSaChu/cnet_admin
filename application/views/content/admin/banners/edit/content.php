@@ -1,6 +1,6 @@
 <div class='panel'>
   <header>
-    <h2>修改最新消息</h2>
+    <h2>修改 Banner</h2>
     <a href='<?php echo base_url ($uri_1);?>' class='icon-x'></a>
   </header>
 
@@ -24,22 +24,7 @@
 
 
     <div class='row n2'>
-      <label>* 選單</label>
-      <div>
-        <select name='menu_id' id='menu_id' data-menus='<?php echo json_encode (Menu::alls ());?>' data-d4='<?php echo isset ($posts['menu_id']) ? $posts['menu_id'] : $obj->menu_id;?>'></select>
-      </div>
-    </div>
-
-
-    <div class='row n2'>
-      <label>* 最新消息標題</label>
-      <div>
-        <input type='text' name='title' value='<?php echo isset ($posts['title']) ? $posts['title'] : $obj->title;?>' placeholder='請輸入最新消息標題..' maxlength='200' pattern='.{1,200}' required title='輸入最新消息標題!' autofocus />
-      </div>
-    </div>
-
-    <div class='row n2'>
-      <label>* 最新消息封面</label>
+      <label>* 封面</label>
       <div class='img_row'>
         <div class='drop_img no_cchoice'>
           <img src='<?php echo $obj->cover->url ();?>' />
@@ -48,11 +33,10 @@
       </div>
     </div>
 
-
     <div class='row n2'>
-      <label>* 最新消息內容</label>
+      <label>* 鏈結</label>
       <div>
-        <textarea name='content' class='pure autosize cke' placeholder='請輸入最新消息內容..'><?php echo htmlspecialchars (isset ($posts['content']) ? $posts['content'] : $obj->content);?></textarea>
+        <input type='text' name='link' value='<?php echo isset ($posts['link']) ? $posts['link'] : $obj->link;?>' placeholder='請輸入鏈結..' maxlength='200' pattern='.{1,200}' required title='輸入鏈結!' autofocus />
       </div>
     </div>
 

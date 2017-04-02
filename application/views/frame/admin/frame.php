@@ -42,6 +42,7 @@
                   <li><a href="<?php echo $url = base_url ('admin', 'langs');?>" class='icon-se<?php echo $now_url == $url ? ' active' : '';?>'>語系管理</a></li>
                   <li><a href="<?php echo $url = base_url ('admin', 'menus');?>" class='icon-se<?php echo $now_url == $url ? ' active' : '';?>'>選單列表</a></li>
                   <li><a href="<?php echo $url = base_url ('admin', 'blogs');?>" class='icon-se<?php echo $now_url == $url ? ' active' : '';?>'>最新消息</a></li>
+                  <li><a href="<?php echo $url = base_url ('admin', 'banners');?>" class='icon-se<?php echo $now_url == $url ? ' active' : '';?>'>Banner 管理</a></li>
                   <li><a href="<?php echo $url = base_url ('admin', 'products');?>" class='icon-se<?php echo $now_url == $url ? ' active' : '';?>'>產品管理</a></li>
                 </ul>
               </label>

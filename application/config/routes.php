@@ -15,4 +15,5 @@ Route::group ('admin', function () {
   Route::resourcePagination (array ('menus'), 'menus');
   Route::resourcePagination (array ('menu', 'menus'), 'menu_menus');
   Route::resourcePagination (array ('blogs'), 'blogs');
+  Route::resourcePagination (array ('banners'), 'banners');
 });
