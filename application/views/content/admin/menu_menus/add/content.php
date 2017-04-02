@@ -9,13 +9,8 @@
     <div class='row n2'>
       <label>* 語系</label>
       <div>
-        <select name='lang_id'>
-    <?php if ($langs = Lang::all (array ('select' => 'id, name'))) {
-            foreach ($langs as $lang) { ?>
-              <option value='<?php echo $lang->id;?>'<?php echo (isset ($posts['lang_id']) ? $posts['lang_id'] : 0) == $lang->id ? ' selected': '';?>><?php echo $lang->name;?></option>
-      <?php }
-          }?>
-        </select>
+        <input type='hidden' name='lang_id' value='<?php echo $parent->lang->id;?>' />
+        <?php echo $parent->lang->name;?>
       </div>
     </div>
 
