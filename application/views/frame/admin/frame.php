@@ -19,7 +19,7 @@
           
           <header>
             <a href='<?php echo base_url ();?>'>C</a>
-            <span>CNET!</span>
+            <span>CNET 管理後台!</span>
           </header>
 
           <div id='login_user'>

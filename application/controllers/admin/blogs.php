@@ -27,6 +27,7 @@ class Blogs extends Admin_controller {
     $columns = array ( 
         array ('key' => 'content', 'title' => '內容', 'sql' => 'content LIKE ?'), 
         array ('key' => 'title',   'title' => '標題', 'sql' => 'title LIKE ?'), 
+        array ('key' => 'lang_id', 'title' => '語系', 'sql' => 'lang_id = ?', 'select' => array_map (function ($lang) { return array ('value' => '' . $lang->id, 'text' => $lang->name);}, Lang::all (array ('select' => 'id, name')))),
       );
 
     $configs = array_merge (explode ('/', $this->uri_1), array ('%s'));
