@@ -13,6 +13,58 @@
   <body lang="zh-tw">
     <?php echo isset ($hidden_list) ? $hidden_list : ''; ?>
 
-    <?php echo isset ($content) ? $content : ''; ?>
+    <div id='container' class=''>
+      <div id='main_row'>
+        <div id='left_side'>
+          
+          <header>
+            <a href='<?php echo base_url ();?>'>Ｚ</a>
+            <span>Zeus Design Studio!</span>
+          </header>
+
+          <div id='login_user'>
+            <figure class='_i'>
+              <img src="<?php echo User::current ()->avatar ();?>">
+            </figure>
+            <div>
+              <span>Hi, 您好!</span>
+              <span><?php echo User::current ()->account;?></span>
+            </div>
+          </div>
+
+          <ul id='main_menu'>
+            <li>
+              <label data-cnt='0'>
+                <input type='checkbox' />
+                <span class='icon-u'>管理區</span>
+                <ul>
+                  <li><a href="<?php echo $url = base_url ('admin');?>" class='icon-se<?php echo $now_url == $url ? ' active' : '';?>'>後台首頁</a></li>
+                </ul>
+              </label>
+            </li>
+          </ul>
+
+        </div>
+        <div id='right_side'>
+          <div id='top_side'>
+            <button type='button' id='hamburger' class='icon-m'></button>
+            <span>
+              <a href='<?php echo base_url ('logout');?>' class='icon-o'></a>
+            </span>
+          </div>
+          <div id='main'>
+      <?php if ($_flash_danger = Session::getData ('_flash_danger', true)) { ?>
+              <div id='_flash_danger'><?php echo $_flash_danger;?></div>
+      <?php } else if ($_flash_info = Session::getData ('_flash_info', true)) { ?>
+              <div id='_flash_info'><?php echo $_flash_info;?></div>
+      <?php }?>
+      <?php echo isset ($content) ? $content : ''; ?>
+          </div>
+          <div id='bottom_side'>
+            後台版型設計 by 宙思 <a href='http://www.ioa.tw/' target='_blank'>OA Wu</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

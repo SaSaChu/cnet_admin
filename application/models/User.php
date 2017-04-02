@@ -31,4 +31,7 @@ class User extends OaModel {
   public function is_root () {
     return true;
   }
+  public function avatar () {
+    return base_url ('resource', 'image', 'user.png');
+  }
 }

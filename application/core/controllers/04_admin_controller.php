@@ -16,11 +16,12 @@ class Admin_controller extends Oa_controller {
          ->set_content_path ('content', 'admin')
          ->set_public_path ('public')
 
-         ->set_title ("OA's CI")
+         ->set_title ("CNET 管理後台")
 
          ->_add_meta ()
          ->_add_css ()
          ->_add_js ()
+         ->add_param ('now_url', base_url ('admin'));
          ;
   }
 
@@ -35,6 +36,9 @@ class Admin_controller extends Oa_controller {
   private function _add_js () {
     return $this->add_js (base_url ('resource', 'javascript', 'jquery_v1.10.2', 'jquery-1.10.2.min.js'))
                 ->add_js (base_url ('resource', 'javascript', 'jquery-rails_d2015_03_09', 'jquery_ujs.js'))
+                ->add_js (base_url ('resource', 'javascript', 'ckeditor_d2015_05_18', 'ckeditor.js'), false)
+                ->add_js (base_url ('resource', 'javascript', 'ckeditor_d2015_05_18', 'config.js'), false)
+                ->add_js (base_url ('resource', 'javascript', 'ckeditor_d2015_05_18', 'adapters', 'jquery.js'), false)
                 ;
   }
 }
