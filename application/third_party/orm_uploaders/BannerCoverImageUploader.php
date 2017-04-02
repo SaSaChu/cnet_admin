@@ -10,7 +10,7 @@ class BannerCoverImageUploader extends OrmImageUploader {
   public function getVersions () {
     return array (
         '' => array (),
-        '450x180c' => array ('adaptiveResizeQuadrant', 450, 180, 'c')
+        '100x100c' => array ('adaptiveResizeQuadrant', 100, 100, 'c')
       );
   }
 }

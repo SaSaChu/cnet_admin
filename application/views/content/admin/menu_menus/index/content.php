@@ -1,7 +1,7 @@
 <header>
   <div class='title'>
-    <h1>選單</h1>
-    <p>子選單列表</p>
+    <h1>子選單</h1>
+    <p>列表</p>
   </div>
 
   <form class='select'>

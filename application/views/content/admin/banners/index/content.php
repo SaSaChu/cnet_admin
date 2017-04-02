@@ -1,7 +1,7 @@
 <header>
   <div class='title'>
     <h1>Banner </h1>
-    <p>Banner 列表</p>
+    <p>列表</p>
   </div>
 
   <form class='select'>
@@ -56,8 +56,8 @@
             <tr>
               <td class='center'><?php echo $obj->id;?></td>
               <td class='center'>
-                <figure class='_i' href='<?php echo $obj->cover->url ('450x180c');?>'>
-                  <img src='<?php echo $obj->cover->url ('450x180c');?>' />
+                <figure class='_i' href='<?php echo $obj->cover->url ('100x100c');?>'>
+                  <img src='<?php echo $obj->cover->url ('100x100c');?>' />
                   <figcaption data-description=''></figcaption>
                 </figure>
               </td>

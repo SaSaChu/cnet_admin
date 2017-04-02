@@ -26,6 +26,7 @@ class Banners extends Admin_controller {
   public function index ($offset = 0) {
     $columns = array ( 
         array ('key' => 'link', 'title' => '鏈結', 'sql' => 'link LIKE ?'), 
+        array ('key' => 'lang_id', 'title' => '語系', 'sql' => 'lang_id = ?', 'select' => array_map (function ($lang) { return array ('value' => '' . $lang->id, 'text' => $lang->name);}, Lang::all (array ('select' => 'id, name')))),
       );
 
     $configs = array_merge (explode ('/', $this->uri_1), array ('%s'));
