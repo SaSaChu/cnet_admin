@@ -57,7 +57,7 @@
             <tr>
               <td><?php echo $obj->id;?></td>
               <td><?php echo $obj->name;?></td>
-              <td><?php echo $obj->lang->name;?></td>
+              <td><?php echo $obj->lang ? $obj->lang->name : '';?></td>
               <td><?php echo count ($obj->subs);?></td>
 
               <td class='right sort_btns'>

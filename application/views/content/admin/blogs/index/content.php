@@ -64,7 +64,7 @@
               </td>
               <td><?php echo $obj->mini_title (25);?></td>
               <td><?php echo $obj->mini_content (50);?></td>
-              <td><?php echo $obj->lang->name;?></td>
+              <td><?php echo $obj->lang ? $obj->lang->name : '';?></td>
               <td class='right'>
                 <a class='icon-e' href="<?php echo base_url ($uri_1, $obj->id, 'edit');?>"></a>
                 /

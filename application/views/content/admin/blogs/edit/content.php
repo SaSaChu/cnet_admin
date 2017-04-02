@@ -1,6 +1,6 @@
 <div class='panel'>
   <header>
-    <h2>修改最新消息</h2>
+    <h2>修改</h2>
     <a href='<?php echo base_url ($uri_1);?>' class='icon-x'></a>
   </header>
 
@@ -32,14 +32,14 @@
 
 
     <div class='row n2'>
-      <label>* 最新消息標題</label>
+      <label>* 標題</label>
       <div>
-        <input type='text' name='title' value='<?php echo isset ($posts['title']) ? $posts['title'] : $obj->title;?>' placeholder='請輸入最新消息標題..' maxlength='200' pattern='.{1,200}' required title='輸入最新消息標題!' autofocus />
+        <input type='text' name='title' value='<?php echo isset ($posts['title']) ? $posts['title'] : $obj->title;?>' placeholder='請輸入標題..' maxlength='200' pattern='.{1,200}' required title='輸入標題!' autofocus />
       </div>
     </div>
 
     <div class='row n2'>
-      <label>* 最新消息封面</label>
+      <label>* 封面</label>
       <div class='img_row'>
         <div class='drop_img no_cchoice'>
           <img src='<?php echo $obj->cover->url ();?>' />
@@ -50,9 +50,9 @@
 
 
     <div class='row n2'>
-      <label>* 最新消息內容</label>
+      <label>* 內容</label>
       <div>
-        <textarea name='content' class='pure autosize cke' placeholder='請輸入最新消息內容..'><?php echo htmlspecialchars (isset ($posts['content']) ? $posts['content'] : $obj->content);?></textarea>
+        <textarea name='content' class='pure autosize cke' placeholder='請輸入內容..'><?php echo htmlspecialchars (isset ($posts['content']) ? $posts['content'] : $obj->content);?></textarea>
       </div>
     </div>
 

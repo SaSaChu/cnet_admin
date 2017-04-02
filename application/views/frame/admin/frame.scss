@@ -1450,7 +1450,7 @@ form.form {
         width: calc(100% - #{$tw});
         padding-right: 10px;
 
-        > input[type='number'], > input[type='date'], > input[type='text'], > textarea {
+        > input[type='number'], > input[type='date'], > input[type='file'], > input[type='text'], > textarea {
           @include input;
           width: 300px;
           max-width: 100%;

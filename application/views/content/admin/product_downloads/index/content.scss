@@ -1,0 +1,17 @@
+/**
+ * @author      OA Wu <comdan66@gmail.com>
+ * @copyright   Copyright (c) 2016 OA Wu Design
+ * @link        http://www.ioa.tw/
+ */
+
+@import "_oa";
+
+.download {
+  width: 0+75px / 5 * 2;
+  height: 0+100px / 5 * 2;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+}

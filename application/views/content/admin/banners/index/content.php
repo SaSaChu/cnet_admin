@@ -62,7 +62,7 @@
                 </figure>
               </td>
               <td><?php echo $obj->link;?></td>
-              <td><?php echo $obj->lang->name;?></td>
+              <td><?php echo $obj->lang ? $obj->lang->name : '';?></td>
               <td class='right'>
                 <a class='icon-e' href="<?php echo base_url ($uri_1, $obj->id, 'edit');?>"></a>
                 /

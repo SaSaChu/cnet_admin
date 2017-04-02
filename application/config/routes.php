@@ -17,4 +17,8 @@ Route::group ('admin', function () {
   Route::resourcePagination (array ('blogs'), 'blogs');
   Route::resourcePagination (array ('banners'), 'banners');
   Route::resourcePagination (array ('products'), 'products');
+  Route::resourcePagination (array ('product', 'images'), 'product_images');
+  Route::resourcePagination (array ('product', 'features'), 'product_features');
+  Route::resourcePagination (array ('product', 'sources'), 'product_sources');
+  Route::resourcePagination (array ('product', 'downloads'), 'product_downloads');
 });

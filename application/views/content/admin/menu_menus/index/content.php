@@ -56,7 +56,7 @@
             <tr>
               <td><?php echo $obj->id;?></td>
               <td><?php echo $obj->name;?></td>
-              <td><?php echo $obj->lang->name;?></td>
+              <td><?php echo $obj->lang ? $obj->lang->name : '';?></td>
               <td class='right sort_btns'>
                 <a class='icon-tu' href='<?php echo base_url ($uri_1, $parent->id, $uri_2, $obj->id, 'sort', 'up');?>' data-method='post'></a>
                 <a class='icon-td' href='<?php echo base_url ($uri_1, $parent->id, $uri_2, $obj->id, 'sort', 'down');?>' data-method='post'></a>

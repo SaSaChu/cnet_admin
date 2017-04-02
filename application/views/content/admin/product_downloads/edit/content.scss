@@ -1,0 +1,20 @@
+/**
+ * @author      OA Wu <comdan66@gmail.com>
+ * @copyright   Copyright (c) 2016 OA Wu Design
+ * @link        http://www.ioa.tw/
+ */
+
+@import "_oa";
+
+#download {
+  display: block;
+  border: 1px solid rgba(39, 40, 34, .30);
+  padding: 0 6px;
+  text-decoration: none;
+  margin-bottom: 8px;
+  width: 300px;
+  height: 35px;
+  line-height: 35px - 2px;
+  @include overflow-docx3();
+  @include border-radius(3px);
+}
