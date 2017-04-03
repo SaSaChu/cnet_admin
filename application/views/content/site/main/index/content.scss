@@ -5,7 +5,7 @@
 
 @import "_oa";
 
-$mc: 5;
+$mc: 15;
 
 #banner {
   height: 380px;
@@ -234,6 +234,7 @@ $mc: 5;
         };
         img {
           width: calc(100% - 16px * 2);
+          margin-top: 16px;
         }
         span {
           display: inline-block;
@@ -246,6 +247,7 @@ $mc: 5;
           height: 25px * 2;
           overflow: hidden;
           word-break: break-all;
+          margin-top: 10px;
         }
       }
     }

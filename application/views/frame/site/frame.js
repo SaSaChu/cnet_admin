@@ -4,4 +4,7 @@
  */
 
 $(function () {
+  $('#lang_select').change (function () {
+    window.location.replace ($(this).data ('url') + '/' + $(this).val ());
+  });
 });

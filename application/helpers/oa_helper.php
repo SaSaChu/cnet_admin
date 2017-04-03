@@ -4,7 +4,12 @@
  * @author      OA Wu <comdan66@gmail.com>
  * @copyright   Copyright (c) 2016 OA Wu Design
  */
-
+if (!function_exists ('isJson')) {
+  function isJson ($string) {
+   json_decode ($string);
+   return (json_last_error () == JSON_ERROR_NONE);
+  }
+}
 if (!function_exists ('remove_ckedit_tag')) {
   function remove_ckedit_tag ($text) {
     return preg_replace ("/\s+/", "", preg_replace ("/&#?[a-z0-9]+;/i", "", str_replace ('▼', '', str_replace ('▲', '', trim (strip_tags ($text))))));

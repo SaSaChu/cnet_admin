@@ -22,6 +22,28 @@ class Lang extends OaModel {
   static $belongs_to = array (
   );
 
+  private static $current = '';
+
+  public static function get () {
+    if (!$keys = func_get_args ()) return '';
+    
+    if (!isJson ($file = read_file ($path = FCPATH . 'application' . DIRECTORY_SEPARATOR . 'language' . DIRECTORY_SEPARATOR . Lang::current ()->id . DIRECTORY_SEPARATOR . array_shift ($keys) . '.json')))
+      exit ('語言包有誤');
+
+    $file = json_decode ($file, true);
+
+    foreach ($keys as $key)
+      if (!isset ($file[$key]))
+        return '';
+      else
+        $file = $file[$key];
+
+    return $file;
+  }
+  public static function current () {
+    if (self::$current !== '') return self::$current;
+    return self::$current = ($id = Session::getData ('lang_id')) ? Lang::find_by_id ($id) : Lang::first ();
+  }
   public function destroy () {
     if ($this->products)
       foreach ($this->products as $product)

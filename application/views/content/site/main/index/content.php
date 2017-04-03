@@ -2,28 +2,17 @@
 <div id='banner'>
   <div class='container'>
 
-    <div class='banners n1'>
-      <a href=''>
-        <img src='http://127.0.0.1/case/cnet/Storage/Web/Original/9e57c7a0-41d4-4a47-97c2-a230a2254f27.png'>
-      </a>
-      <a href=''>
-        <img src='http://127.0.0.1/case/cnet/Storage/Web/Original/050fd724-9533-41f1-bef8-403ee98dee15.png'>
-      </a>
-      <a href=''>
-        <img src='http://127.0.0.1/case/cnet/Storage/Web/Original/9e57c7a0-41d4-4a47-97c2-a230a2254f27.png'>
-      </a>
-      <a href=''>
-        <img src='http://127.0.0.1/case/cnet/Storage/Web/Original/050fd724-9533-41f1-bef8-403ee98dee15.png'>
-      </a>
-      <a href=''>
-        <img src='http://127.0.0.1/case/cnet/Storage/Web/Original/9e57c7a0-41d4-4a47-97c2-a230a2254f27.png'>
-      </a>
+    <div class='banners'>
+<?php foreach ($banners = Banner::find ('all', array ('conditions' => array ('lang_id = ?', Lang::current ()->id))) as $banner) { ?>
+        <a href='<?php echo $banner->link;?>'>
+          <img src='<?php echo $banner->cover->url ('1140x380c');?>'>
+        </a>
+<?php } ?>
     </div>
     <div class='dots'>
-      <a></a>
-      <a></a>
-      <a></a>
-      <a></a>
+<?php foreach ($banners as $banner) { ?>
+        <a></a>
+<?php } ?>
     </div>
   </div>
 </div>
@@ -32,12 +21,9 @@
   <div class='container'>
     <div class='items'>
       <div>
-        <a href=''>ADSL/VDSL</a>
-        <a href=''>Wi-Fi Router</a>
-        <a href=''>Wi-Fi Extender</a>
-        <a href=''>USB Wi-Fi Adaptör</a>
-        <a href=''>Switch</a>
-        <a href=''>Spotcam</a>
+<?php foreach (Menu::find ('all', array ('conditions' => array ('menu_id = ? AND lang_id = ?', 0, Lang::current ()->id))) as $menu) { ?>
+        <a href='<?php echo base_url ('products', $menu->id);?>'><?php echo $menu->name;?></a>
+<?php } ?>
       </div>
     </div>
   </div>
@@ -45,24 +31,14 @@
 
 <div id='products'>
   <div class='container'>
-    <h2>混合產品</h2>
+    <h2><?php echo Lang::get ('index', 'mixed');?></h2>
     <div class='items'>
-      <a href="">
-        <img src='http://127.0.0.1/case/cnet/Storage/Web/Original/c2c9e9e6-14be-4547-b5ff-4ed9dbb3b060.jpg'>
-        <span>CSH-800 8 Port Fast Ethernet Switch</span>
-      </a>
-      <a href="">
-        <img src='http://127.0.0.1/case/cnet/Storage/Web/Original/c2c9e9e6-14be-4547-b5ff-4ed9dbb3b060.jpg'>
-        <span>C1 High Power Touch Screen Wi-Fi Range Extender</span>
-      </a>
-      <a href="">
-        <img src='http://127.0.0.1/case/cnet/Storage/Web/Original/c2c9e9e6-14be-4547-b5ff-4ed9dbb3b060.jpg'>
-        <span>CSH-800 8 Port Fast Ethernet Switch</span>
-      </a>
-      <a href="">
-        <img src='http://127.0.0.1/case/cnet/Storage/Web/Original/c2c9e9e6-14be-4547-b5ff-4ed9dbb3b060.jpg'>
-        <span>CSH-800 8 Port Fast Ethernet Switch</span>
-      </a>
+<?php foreach ($products as $product) { ?>
+        <a href="">
+          <img src='<?php echo $product->images[0]->name->url ('500x500c');?>'>
+          <span><?php echo $product->title;?></span>
+        </a>
+<?php } ?>
     </div>
   </div>
 </div>
@@ -70,26 +46,21 @@
 <div id='blog'>
   <div class='container'>
     <div>
-      <h3>Cnet 新聞</h3>
-      <a href="">
-        <h4>Gaziantep Tanıtım Toplantısı</h4>
-        <p>Ağ ürünlerinde 25 yılı aşkın tecrübesi ile yeniden Türkiye pazarına giren CNet ile güvenlik sistemleri konusunda 10 yıllık bilgi ve birikime sahip, tüketici elektroniğinin lider firmalarından Next&NextStar Gaziantep’te ortak bir organizasyonla bir araya gelerek misafirlerini ağırlayacaklar.</p>
-      </a>
-      <a href="">
-        <h4>Gaziantep Tanıtım Toplantısı</h4>
-        <p>Ağ ürünlerinde 25 yılı aşkın tecrübesi ile yeniden Türkiye pazarına giren CNet ile güvenlik sistemleri konusunda 10 yıllık bilgi ve birikime sahip, tüketici elektroniğinin lider firmalarından Next&NextStar Gaziantep’te ortak bir organizasyonla bir araya gelerek misafirlerini ağırlayacaklar.</p>
-      </a>
-      <a href="">
-        <h4>Gaziantep Tanıtım Toplantısı</h4>
-        <p>Ağ ürünlerinde 25 yılı aşkın tecrübesi ile yeniden Türkiye pazarına giren CNet ile güvenlik sistemleri konusunda 10 yıllık bilgi ve birikime sahip, tüketici elektroniğinin lider firmalarından Next&NextStar Gaziantep’te ortak bir organizasyonla bir araya gelerek misafirlerini ağırlayacaklar.</p>
-      </a>
-      <a href="">Tümünü Gör</a>
+      <h3><?php echo Lang::get ('index', 'cnet_news');?></h3>
+<?php foreach (Blog::find ('all', array ('limit' => 3, 'conditions' => array ('lang_id = ?', Lang::current ()->id))) as $blog) { ?>
+        <a href="<?php echo base_url ('blog', $blog->id);?>">
+          <h4><?php echo $blog->title;?></h4>
+          <p><?php echo $blog->mini_content ();?></p>
+        </a>
+<?php } ?>
+
+      <a href="<?php echo base_url ('blogs');?>"><?php echo Lang::get ('index', 'see_more');?></a>
     </div>
     <div>
-      <h3>關於Cnet</h3>
+      <h3><?php echo Lang::get ('index', 'cnet_turkey');?></h3>
       <div>
         <img src='http://127.0.0.1/case/cnet/Images/welcome.jpg' />
-        <p>1987 de kurulan ve ürettiği network ekipmanlarıyla global pazarda önemli bir yere sahip olan CNet, ABD ve Uluslararası pazarlarda yüksek kaliteli ürünleriyle kendini zirveye taşımıştır. Türkiye piyasasına yabancı olmayan CNet, Next&NextStar ile yapmış olduğu distribütörlük anlaşmasıyla birlikte Next&NextStar güvencesiyle yeniden Türkiye-de.</p>
+        <p><?php echo Lang::get ('index', 'desc');?></p>
       </div>
     </div>
   </div>

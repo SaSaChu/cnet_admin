@@ -1,0 +1,93 @@
+{
+  "search_input": "I am looking for ...",
+  "pages":{
+    "index": "Home Page",
+    "about": "About CNet",
+    "news": "Cnet News",
+    "support": "Support",
+    "product": "Products",
+    "partner": "Our partners"
+    },
+  "about":[
+      {
+        "name": "About CNet",
+        "subs": {
+          "cnet": {
+            "text": "CNET",
+            "href": ""  
+          },
+          "mission": {
+            "text": "Mission",
+            "href": ""  
+          },
+          "customers": {
+            "text": "Customers",
+            "href": ""  
+          },
+          "customer_happiness": {
+            "text": "Customer happiness",
+            "href": ""  
+          },
+          "sales_marketing": {
+            "text": "Sales & Marketing",
+            "href": ""  
+          },
+          "service": {
+            "text": "Service",
+            "href": ""  
+          },
+          "production": {
+            "text": "Production",
+            "href": "" 
+          }
+        }
+      },
+      {
+        "name": "Cnet MENU",
+        "subs": {
+          "home_page": {
+            "text": "Home page",
+            "href": ""
+          },
+          "products": {
+            "text": "Products",
+            "href": ""
+          },
+          "our_partners": {
+            "text": "Our partners",
+            "href": ""
+          },
+          "blog": {
+            "text": "Blog",
+            "href": ""
+          },
+          "corporate": {
+            "text": "Corporate",
+            "href": ""
+          },
+          "support": {
+            "text": "Support",
+            "href": ""
+          },
+          "contact": {
+            "text": "Contact",
+            "href": ""
+          }
+        }
+      },
+      {
+        "name": "Contact",
+        "subs": {
+          "address": {
+            "text": "7F.-1, No.738, Zhongzheng Rd., Zhonghe Dist., New Taipei City 235, Taiwan (R.O.C.)",
+            "href": ""
+          },
+          "phone": {
+            "text": "＋886 2 2222-1234",
+            "href": ""
+          }
+        }
+      }
+  ],
+  "copyright": "© 2015 Copyright, CNet Technology Corporation. All Rights Reserved."
+}

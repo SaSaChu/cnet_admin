@@ -4,11 +4,6 @@
  * @link        http://www.ioa.tw/
  */
 
-@import "_oa";
-.main {
-  font-weight: bold;
-}
-.sub {
-  font-weight: normal;
-  padding-left: 15px;
-}
+$(function () {
+  $('.i_c').imgLiquid ({verticalAlign: 'center'});
+});

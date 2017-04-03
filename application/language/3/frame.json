@@ -1,0 +1,97 @@
+{
+  "search_input": "我想搜尋",
+  "pages":{
+    "index": "首頁",
+    "about": "關於我們",
+    "news": "最新消息",
+    "support": "支持",
+    "product": "產品",
+    "partner": "我們的合作夥伴"
+    },
+  "about":[
+      {
+        "name": "關於我們",
+        "subs": {
+          "cnet": {
+            "text": "CNET",
+            "href": ""  
+          },
+          "mission": {
+            "text": "使命",
+            "href": ""  
+          },
+          "customers": {
+            "text": "客戶",
+            "href": ""  
+          },
+          "customer_happiness": {
+            "text": "客戶滿意度",
+            "href": ""  
+          },
+          "sales_marketing": {
+            "text": "銷售和市場營銷",
+            "href": ""  
+          },
+          "service": {
+            "text": "服務",
+            "href": ""  
+          },
+          "production": {
+            "text": "生產",
+            "href": "" 
+          }
+        }
+      },
+      {
+        "name": "Cnet選單",
+        "subs": {
+          "home_page": {
+            "text": "首頁",
+            "href": ""
+          },
+          "products": {
+            "text": "製品",
+            "href": ""
+          },
+          "our_partners": {
+            "text": "我們的合作夥伴",
+            "href": ""
+          },
+          "blog": {
+            "text": "博客",
+            "href": ""
+          },
+          "corporate": {
+            "text": "制度",
+            "href": ""
+          },
+          "support": {
+            "text": "支持",
+            "href": ""
+          },
+          "contact": {
+            "text": "聯繫",
+            "href": ""
+          }
+        }
+      },
+      {
+        "name": "聯繫我們",
+        "subs": {
+          "address": {
+            "text": "新北市中和區中正路738號7樓之1",
+            "href": ""
+          },
+          "phone": {
+            "text": "＋886 2 2222-1234",
+            "href": ""
+          },
+          "mail": {
+            "text": "info@myspotcam.com",
+            "href": ""
+          }
+        }
+      }
+  ],
+  "copyright": "© 2015 Copyright, CNet Technology Corporation. All Rights Reserved."
+}

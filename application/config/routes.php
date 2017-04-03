@@ -9,8 +9,15 @@ Route::get ('/logout', 'platform@logout');
 Route::get ('/platform/index', 'platform@login');
 Route::get ('/about', 'main@about');
 Route::get ('/search', 'main@search');
-Route::resourcePagination (array ('blogs'), 'blogs');
+Route::get ('/lang', 'main@lang(0)');
+Route::get ('/lang/(:any)', 'main@lang($1)');
 
+Route::resourcePagination (array ('blogs'), 'blogs');
+Route::resourcePagination (array ('products'), 'products');
+
+// echo '<meta http-equiv="Content-type" content="text/html; charset=utf-8" /><pre>';
+// var_dump (Route::getRoute ());
+// exit ();
 Route::get ('/platform', 'platform@login');
 
 Route::group ('admin', function () {
