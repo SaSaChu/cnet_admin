@@ -62,16 +62,16 @@
               <td><?php echo $obj->mini_title (25);?></td>
               <td><?php echo $obj->mini_content (50);?></td>
               <td>
-                <a class='icon-r' href="<?php echo base_url ('admin', 'product', $obj->id, 'images');?>"></a>
+                <a class='icon-i' href="<?php echo base_url ('admin', 'product', $obj->id, 'images');?>"></a>
               </td>
               <td>
-                <a class='icon-r' href="<?php echo base_url ('admin', 'product', $obj->id, 'features');?>"></a>
+                <a class='icon-i' href="<?php echo base_url ('admin', 'product', $obj->id, 'features');?>"></a>
               </td>
               <td>
-                <a class='icon-r' href="<?php echo base_url ('admin', 'product', $obj->id, 'sources');?>"></a>
+                <a class='icon-i' href="<?php echo base_url ('admin', 'product', $obj->id, 'sources');?>"></a>
               </td>
               <td>
-                <a class='icon-r' href="<?php echo base_url ('admin', 'product', $obj->id, 'downloads');?>"></a>
+                <a class='icon-i' href="<?php echo base_url ('admin', 'product', $obj->id, 'downloads');?>"></a>
               </td>
               <td><?php echo $obj->lang ? $obj->lang->name : '';?></td>
               <td class='right'>
