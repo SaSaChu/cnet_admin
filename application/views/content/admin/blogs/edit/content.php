@@ -24,14 +24,6 @@
 
 
     <div class='row n2'>
-      <label>* 選單</label>
-      <div>
-        <select name='menu_id' id='menu_id' data-menus='<?php echo json_encode (Menu::alls ());?>' data-d4='<?php echo isset ($posts['menu_id']) ? $posts['menu_id'] : $obj->menu_id;?>'></select>
-      </div>
-    </div>
-
-
-    <div class='row n2'>
       <label>* 標題</label>
       <div>
         <input type='text' name='title' value='<?php echo isset ($posts['title']) ? $posts['title'] : $obj->title;?>' placeholder='請輸入標題..' maxlength='200' pattern='.{1,200}' required title='輸入標題!' autofocus />
