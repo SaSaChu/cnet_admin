@@ -22,6 +22,13 @@
           <input type='search' name='search' placeholder='我要搜尋...' />
           <button typ='submit' class='icon-search'></button>
         </form>
+        <span class='lang'>
+          <select>
+            <option>中文</option>
+            <option>英文</option>
+          </select>
+          <label class='icon-keyboard_arrow_down'></label>
+        </span>
       </div>
     </div>
 
