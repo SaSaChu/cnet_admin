@@ -4,3 +4,251 @@
  */
 
 @import "_oa";
+
+$mc: 5;
+
+#banner {
+  height: 380px;
+  background-color: rgba(33, 89, 153, 1.00);
+  @include range-width(0, 480px){
+    height: 100px + 30px;
+  };
+  @include range-width(480px, 630px){
+    height: 150px + 30px;
+  };
+  @include range-width(630px, 780px){
+    height: 200px + 30px;
+  };
+  @include range-width(780px, 930px){
+    height: 250px;
+  };
+  @include range-width(930px, 1180px){
+    height: 300px;
+  };
+
+  .container {
+    position: relative;
+
+    .dots {
+      position: absolute;
+      right: 10px;
+      top: 24px;
+      display: inline-block;
+      width: 15px;
+      > a {
+        display: block;
+        width: 10px;
+        height: 10px;
+        margin-left: 5px / 2;
+        background-color: rgba(255, 255, 255, 1.00);
+        cursor: pointer;
+        @include border-radius(50%);
+
+        &.active {
+          background-color: rgba(160, 204, 83, 1.00);
+        }
+
+        + a {
+          margin-top: 8px;
+        }
+      }
+      @include range-width(0, 780px){
+        position: relative;
+        width: auto;
+        @include clearfix();
+        > a {
+          display: inline-block;
+          float: left;
+          
+          + a {
+            margin-top: 0;
+            margin-left: 8px;
+          }
+        }
+      }
+
+    }
+    .banners {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      @include range-width(0, 780px){
+        max-height: calc(100% - 30px);
+      }
+      overflow: hidden;
+
+      > a {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        @include transition(left .3s);
+        
+        img {
+          max-height: 100%;
+        }
+
+        @for $i from 1 through $mc {
+          &:nth-child(#{$i}) {
+            left: 100% * ($i - 1);
+          }
+        }
+      }
+      @for $i from 1 through $mc {
+        &.n#{$i} {
+          > a {
+            @for $j from 1 through $mc {
+              &:nth-child(#{$j}) {
+                left: 100% * ($j - $i);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#menu {
+  padding-top: 16px;
+  background-color: rgba(33, 89, 153, 1.00);
+
+  .container {
+    
+    .items {
+      display: inline-block;
+      width: 100%;
+      border: 2px solid rgba(51, 127, 195, 1.00);
+      @include border-radius(4px);
+      
+      div {
+        display: inline-block;
+        @include clearfix();
+        
+        a {
+          position: relative;
+          display: inline-block;
+          float: left;
+          text-decoration: none;
+          font-weight: bold;
+          height: 55px;
+          line-height: 55px;
+          padding: 0 10px;
+          color: rgba(132, 187, 230, 1.00);
+          @include overflow-docx3();
+          @include transition(color .3s);
+
+          
+          @include range-width(0, 450px){
+            width: 100%;
+            height: 45px;
+            line-height: 45px;
+            margin: 5px 0;
+          };
+          @include range-width(450px, 1044px){
+            width: calc(100% / 2 - 16px / 2);
+            &:nth-child(2n + 2) {
+              margin-left: 16px;
+            }
+            &:nth-child(n + 3) {
+              margin-top: 16px;
+            }
+          };
+          @include range-width(1044px){
+            width: 150px;
+            + a {
+              margin-left: 20px;
+            }
+          }
+          &:after {
+            position: relative;
+            top: 8px;
+            content: '';
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background-image: image-url('signal.png', false, false);
+            background-position: center center;
+            background-repeat: no-repeat;
+            @include opacity(0);
+            @include transition(opacity .3s);
+          }
+          &:hover {
+            color: white;
+            &:after {
+              @include opacity(1);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+#products {
+  background-color: rgba(33, 89, 153, 1.00);
+  .container {
+    h2 {
+      display: inline-block;
+      width: 100%;
+      color: white;
+      font-size: 30px;
+    }
+    .items {
+      padding-bottom: 24px;
+      @include clearfix();
+      > a {
+        display: inline-block;
+        float: left;
+        background-color: white;
+        padding-bottom: 16px;
+        @include border-radius(3px);
+        overflow: hidden;
+
+        @include range-width(0, 450px) {
+          width: 100%;
+          + * {
+            margin-top: 16px;
+          }
+        };
+        @include range-width(450px, 950px) {
+          width: calc(50% - 10px / 2);
+
+          &:nth-child(even) {
+            margin-left: 10px;
+          }
+          &:nth-child(n + 3) {
+            margin-top: 10px;
+          }
+        };
+        @include range-width(950px) {
+          width: calc(100% / 4 - 16px * 3 / 4);
+          + * {
+            margin-left: 16px;
+          }
+        };
+        img {
+          width: calc(100% - 16px * 2);
+        }
+        span {
+          display: inline-block;
+          width: 100%;
+          padding: 0 16px;
+          text-align: left;
+          color: rgba(83, 89, 153, 1.00);
+          font-size: 18px;
+          line-height: 25px;
+          height: 25px * 2;
+          overflow: hidden;
+          word-break: break-all;
+        }
+      }
+    }
+  }
+}
+

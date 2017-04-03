@@ -1,0 +1,81 @@
+/**
+ * @author      OA Wu <comdan66@gmail.com>
+ * @copyright   Copyright (c) 2016 OA Wu Design
+ */
+
+@import "_oa";
+
+#main {
+  margin-top: 16px;
+
+  .container {
+    > * {
+      float: left;
+      display: inline-block;
+      border: 1px solid rgba(191, 209, 216, 1.00);
+      text-align: center;
+      text-decoration: none;
+      padding: 16px;
+      @include border-radius(3px);
+
+      @include range-width(0, 435px){
+        width: 100%;
+        + * {
+          margin-top: 16px
+        }
+      }
+      @include range-width(435px, 550px){
+        width: calc(100% / 2 - 16px * 1 / 2);
+        &:nth-child(2n + 2) {
+          margin-left: 16px;
+        }
+        &:nth-child(n + 3) {
+          margin-top: 16px
+        }
+      }
+      @include range-width(550px, 750px){
+        width: calc(100% / 2 - 24px * 1 / 2);
+        &:nth-child(2n + 2) {
+          margin-left: 24px;
+        }
+        &:nth-child(n + 3) {
+          margin-top: 24px
+        }
+      }
+      @include range-width(750px, 1200px){
+        width: calc(100% / 3 - 24px * 2 / 3);
+        &:nth-child(3n + 2), &:nth-child(3n + 3) {
+          margin-left: 24px;
+        }
+        &:nth-child(n + 4) {
+          margin-top: 24px
+        }
+      }
+      @include range-width(1200px){
+        width: calc(100% / 4 - 24px * 3 / 4);
+        &:nth-child(4n + 2), &:nth-child(4n + 3), &:nth-child(4n + 4) {
+          margin-left: 24px;
+        }
+        &:nth-child(n + 5) {
+          margin-top: 24px
+        }
+      };
+      img {
+        display: inline-block;
+        max-width: 100%;
+        margin: 0 auto;
+      }
+      h3 {
+        display: inline-block;
+        width: 100%;
+        text-align: left;
+        color: rgba(33, 89, 153, 1.00);
+        font-size: 14.5px;
+        height: 21px * 2;
+        line-height: 21px;
+        overflow: hidden;
+        font-weight: normal;
+      }
+    }
+  }
+}

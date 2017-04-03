@@ -1,0 +1,123 @@
+/**
+ * @author      OA Wu <comdan66@gmail.com>
+ * @copyright   Copyright (c) 2016 OA Wu Design
+ */
+
+@import "_oa";
+.items {
+  background-color: rgba(24, 96, 165, 1.00);
+  > a {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+    @include range-width(0, 700px){
+      text-align: center;
+    }
+    &.sub {
+      margin-left: 5px;
+      width: calc(100% - 5px - 20px);
+      &:before {
+        font-family: 'icomoon', "微軟正黑體","Open sans", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+        content: "\e969";
+        margin-right: 5px;
+      }
+    }
+    &:hover, &.active {
+      background-color: rgba(72, 147, 219, 1.00);
+    }
+  }
+}
+
+#products {
+  display: inline-block;
+  width: 100%;
+
+  @include clearfix();
+  @include range-width(500px){
+    padding-top: 30px;
+    padding-left: 30px;
+  }
+    
+  .product {
+    float: left;
+    display: inline-block;
+    border: 1px solid rgba(191, 209, 216, 1.00);
+    text-align: center;
+    text-decoration: none;
+    padding: 16px;
+    @include border-radius(3px);
+    
+    @include range-width(0, 400px){
+      width: 100%;
+      + * {
+        margin-top: 10px;
+      }
+    }
+    @include range-width(400px, 500px){
+      width: calc(100% / 2 - 10px * 1 / 2);
+      &:nth-child(2n + 2) {
+        margin-left: 10px;
+      }
+      &:nth-child(n + 3) {
+        margin-top: 10px
+      }
+    }
+    @include range-width(500px, 700px){
+      width: calc(100% / 2 - 24px * 1 / 2);
+      &:nth-child(2n + 2) {
+        margin-left: 24px;
+      }
+      &:nth-child(n + 3) {
+        margin-top: 24px
+      }
+    }
+    @include range-width(700px, 800px){
+      width: 100%;
+      + * {
+        margin-top: 16px;
+      }
+    }
+    @include range-width(800px, 1000px){
+      width: calc(100% / 2 - 24px * 1 / 2);
+      &:nth-child(2n + 2) {
+        margin-left: 24px;
+      }
+      &:nth-child(n + 3) {
+        margin-top: 24px
+      }
+    }
+    @include range-width(1000px){
+      width: calc(100% / 3 - 24px * 2 / 3);
+      &:nth-child(3n + 2), &:nth-child(3n + 3) {
+        margin-left: 24px;
+      }
+      &:nth-child(n + 4) {
+        margin-top: 24px
+      }
+    };
+
+    img {
+      display: inline-block;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+    h3 {
+      display: inline-block;
+      width: 100%;
+      text-align: left;
+      color: rgba(33, 89, 153, 1.00);
+      font-size: 14.5px;
+      font-weight: normal;
+      height: 21px * 2;
+      line-height: 21px;
+      overflow: hidden;
+    }
+
+  } 
+}

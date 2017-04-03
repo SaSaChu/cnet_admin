@@ -5,14 +5,8 @@
  * @copyright   Copyright (c) 2016 OA Wu Design
  */
 
-class Main extends Site_controller {
+class Dealers extends Site_controller {
 
-  public function search () {
-    $this->load_view ();
-  }
-  public function about () {
-    $this->load_view ();
-  }
   public function index () {
     $this->load_view ();
   }

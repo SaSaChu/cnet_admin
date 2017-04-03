@@ -7,6 +7,10 @@ Route::get ('admin', 'admin/main@index');
 Route::get ('/login', 'platform@login');
 Route::get ('/logout', 'platform@logout');
 Route::get ('/platform/index', 'platform@login');
+Route::get ('/about', 'main@about');
+Route::get ('/search', 'main@search');
+Route::resourcePagination (array ('blogs'), 'blogs');
+
 Route::get ('/platform', 'platform@login');
 
 Route::group ('admin', function () {

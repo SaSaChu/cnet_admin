@@ -1,0 +1,94 @@
+/**
+ * @author      OA Wu <comdan66@gmail.com>
+ * @copyright   Copyright (c) 2016 OA Wu Design
+ */
+
+@import "_oa";
+.left .items {
+  background-color: rgba(24, 96, 165, 1.00);
+  > a {
+    display: inline-block;
+    width: 100%;
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+    @include range-width(0, 700px){
+      text-align: center;
+    }
+    &:hover, &.active {
+      background-color: rgba(72, 147, 219, 1.00);
+    }
+  }
+}
+
+.right .items {
+  display: inline-block;
+  width: 100%;
+  padding-top: 20px;
+  padding-left: 20px;
+  @include clearfix();
+  > * {
+    display: inline-block;
+    float: left;
+    padding: 16px;
+
+    @include range-width(0, 650px){
+      width: 100%;
+      + * {
+        margin-top: 16px;
+      }
+    }
+    @include range-width(650px, 700px){
+      width: calc(100% / 2 - 14px * 1 / 2);
+      &:nth-child(2n + 2) {
+        margin-left: 14px;
+      }
+      &:nth-child(n + 3) {
+        margin-top: 14px;
+      }
+    }
+    @include range-width(700px, 750px){
+      width: 100%;
+      + * {
+        margin-top: 16px;
+      }
+    }
+    @include range-width(750px, 1050px){
+      width: calc(100% / 2 - 14px * 1 / 2);
+      &:nth-child(2n + 2) {
+        margin-left: 14px;
+      }
+      &:nth-child(n + 3) {
+        margin-top: 14px;
+      }
+    }
+    @include range-width(1050px){
+      width: calc(100% / 3 - 14px * 2 / 3);
+      &:nth-child(3n + 2), &:nth-child(3n + 3) {
+        margin-left: 14px;
+      }
+      &:nth-child(n + 4) {
+        margin-top: 14px;
+      }
+    };
+
+    img {
+      border: 1px solid rgba(171, 187, 202, 1.00);
+      max-width: 100%;
+    }
+    span {
+      display: inline-block;
+      width: 100%;
+      border-top: 1px solid rgba(204, 219, 232, 1.00);
+      margin-top: 20px;
+      padding-top: 10px;
+      @include overflow-docx3();
+      color: rgba(63, 116, 165, 1.00);
+      font-size: 13.5px;
+    }
+  }
+}

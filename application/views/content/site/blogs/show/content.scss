@@ -1,0 +1,93 @@
+/**
+ * @author      OA Wu <comdan66@gmail.com>
+ * @copyright   Copyright (c) 2016 OA Wu Design
+ */
+
+@import "_oa";
+
+article {
+  display: inline-block;
+  width: 100%;
+  
+  > div {
+    display: inline-block;
+    width: 100%;
+    margin-top: 16px;
+    @include clearfix();
+    
+    > * {
+      float: left;
+      display: inline-block;
+    }
+    > aside {
+      width: 200px;
+      img {
+        max-width: 100%;
+      }
+      @include range-width(0, 650px){
+        width: 100%;
+      };
+    }
+    > section {
+      margin-left: 30px;
+      width: calc(100% - 200px - 30px);
+      @include range-width(0, 650px){
+        margin-left: 0;
+        width: 100%;
+        margin-top: 20px;
+      }
+      text-align: left;
+      color: rgba(123, 123, 123, 1.00);
+      font-size: 14.5px;
+      line-height: 21px;
+      border-top: 1px solid rgba(204, 216, 231, 1.00);
+    }
+  }
+  header {
+    display: inline-block;
+    width: 100%;
+    @include clearfix();
+    
+    > * {
+      float: left;
+      display: inline-block;
+    }
+    > div {
+      width: calc(100% - 150px);
+      text-align: left;
+      @include range-width(0, 650px){
+        width: 100%;
+      }
+      h1 {
+        font-size: 25px;
+        color: rgba(45, 96, 165, 1.00);
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 0;
+        @include overflow-docx3();
+      }
+      time {
+        font-size: 15px;
+        color: rgba(100, 100, 100, 1.00);
+        font-style: italic;
+      }
+    }
+    > a {
+      width: 150px;
+      display: inline-block;
+      padding: 5px 10px;
+      text-decoration: none;
+      border: 1px solid rgba(53, 192, 53, 1.00);
+      color: rgba(24, 96, 165, 1.00);
+      @include border-radius(3px);
+      @include transition(color .3s);
+      @include range-width(0, 650px){
+        width: 100%;
+        margin-top: 16px;
+      }
+      &:hover {
+        color: rgba(51, 51, 51, 1.00);
+      }
+    }
+  }
+}

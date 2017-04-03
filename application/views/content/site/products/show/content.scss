@@ -1,0 +1,307 @@
+/**
+ * @author      OA Wu <comdan66@gmail.com>
+ * @copyright   Copyright (c) 2016 OA Wu Design
+ */
+
+@import "_oa";
+#main {
+  margin-top: 24px
+}
+.left {
+  float: left;
+
+  width: 350px;
+  + * {
+    width: calc(100% - 350px);
+  }
+  @include range-width(0, 850px){
+    width: 100%;
+    + * {
+      width: 100%;
+      padding-left: 0 !important;
+      margin-top: 24px;
+    }
+  };
+  @include clearfix();
+  
+  img {
+    float: left;
+    display: inline-block;
+    width: calc(50% - 30px / 2);
+    border: 1px solid rgba(196, 208, 219, 1.00);
+    @include border-radius(5px);
+
+    &:first-child {
+      width: 100%;
+    }
+    &:last-child {
+      margin-left: 30px;
+    }
+    &:nth-child(n + 2) {
+      margin-top: 30px;
+    }
+    &:nth-child(n + 4) {
+      display: none;
+    }
+  }
+}
+.right {
+  float: left;
+  padding-left: 32px;
+}
+
+#tabs {
+  height: 50px;
+  background-color: rgba(24, 96, 165, 1.00);
+  @include clearfix();
+  
+  a {
+    float: left;
+    display: inline-block;
+    width: calc(100% / 3);
+    height: 100%;
+    color: rgba(141, 177, 211, 1.00);
+    cursor: pointer;
+    line-height: 50px;
+    font-weight: bold;
+    @include transition(color .3s);
+    
+    &:hover, &.active {
+      color: rgba(255, 255, 255, 1.00);
+    }
+  }
+}
+#panels {
+  border: 1px solid rgba(196, 208, 219, 1.00);
+  border-top: 0;
+  text-align: left;
+
+  > * {
+    display: none;
+    width: 100%;
+    &.active {
+      display: inline-block;
+    }
+    &:nth-child(1){
+      padding: 24px;
+      > h2 {
+        color: rgba(0, 135, 191, 1.00);
+        font-size: 20px;
+        margin-top: 0;
+      }
+      > div {
+        font-size: 13px;
+        color: rgba(80, 102, 111, 1.00);
+        line-height: 21px;
+      }
+    }
+    &:nth-child(2), &:nth-child(3){
+      
+      div {
+        display: inline-block;
+        width: 100%;
+        padding: 35px 0;
+        @include clearfix();
+
+        + div {
+          border-top: 1px solid rgba(196, 208, 219, 1.00);
+        }
+        > * {
+          float: left;
+          display: inline-block;
+          text-align: center;
+
+          &:nth-child(1) {
+            width: 220px;
+            color: rgba(24, 96, 165, 1.00);
+            font-weight: bold;
+            font-size: 14.5px;
+            padding-right: 60px;
+            text-align: right;
+            margin-top: 10px;
+          }
+          &:nth-child(2) {
+            margin-top: 10px;
+            width: 50px;
+            color: rgba(128, 191, 70, 1.00);
+            &:before {
+              display: inline-block;
+              @include rotate(90deg);
+            }
+          }
+          &:nth-child(3) {
+            width: calc(100% - 220px - 50px);
+            text-align: left;
+            padding-left: 60px;
+            word-break: break-all;
+            line-height: 28px;
+            padding-right: 16px;
+          }
+        }
+      }
+    }
+    &:nth-child(3){
+      div {
+        > * {
+          &:nth-child(3) {
+            cursor: pointer;
+            &:before {
+              content: "\f019";
+              font-family: 'icomoon', "微軟正黑體","Open sans", "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
+              margin-right: 5px;
+              font-size: 17px;
+              color: rgba(59, 132, 198, 1.00);
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+#features {
+  display: inline-block;
+  width: 100%;
+  margin-top: 24px;
+  
+  @include clearfix();
+  > * {
+    float: left;
+    display: inline-block;
+
+    @include range-width(0, 550px){
+      width: 100%;
+      + * {
+        margin-top: 24px;
+      }
+    }
+    @include range-width(550px){
+      width: calc(50% - 32px / 2);
+      &:nth-child(even) {
+        margin-left: 32px;
+      }
+      &:nth-child(n + 3) {
+        margin-top: 32px;
+      }
+    }
+
+    @include clearfix();
+    
+    div {
+      float: left;
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      margin-top: 8px;
+      img {
+        width: 100%;
+      }
+    }
+    span, p {
+      float: left;
+      display: inline-block;
+      width: calc(100% - 60px);
+      padding-left: 24px;
+      word-break: break-all;
+    }
+    span {
+      font-size: 16px;
+      font-weight: bold;
+      color: rgba(0, 135, 191, 1.00);
+      @include overflow-docx3();
+    }
+    p {
+      margin: 0;
+      margin-top: 7px;
+      color: rgba(113, 137, 160, 1.00);
+      font-size: 14px;
+      height: 21px * 2;
+      line-height: 19px;
+      overflow: hidden;
+    }
+  }
+}
+
+#mores {
+  margin-top: 24px;
+  background-color: rgba(24, 96, 165, 1.00);
+  .container {
+    @include clearfix();
+    padding-top: 24px;
+    padding-bottom: 24px;
+    
+    > * {
+      display: inline-block;
+      float: left;
+      padding: 16px;
+      text-align: center;
+      text-decoration: none;
+      background-color: white;
+      @include border-radius(3px);
+
+      @include range-width(0, 435px){
+        width: 100%;
+        &:nth-child(n + 3) {
+          margin-top: 16px
+        }
+        &:nth-child(n + 6) {
+          display: none;
+        }
+      }
+      @include range-width(435px, 650px){
+        width: calc(100% / 2 - 16px * 1 / 2);
+        &:nth-child(2n + 3) {
+          margin-left: 16px;
+        }
+        &:nth-child(n + 4) {
+          margin-top: 16px
+        }
+        &:nth-child(n + 6) {
+          display: none;
+        }
+      }
+      @include range-width(650px, 900px){
+        width: calc(100% / 2 - 24px * 1 / 2);
+        &:nth-child(2n + 3) {
+          margin-left: 24px;
+        }
+        &:nth-child(n + 4) {
+          margin-top: 24px
+        }
+        &:nth-child(n + 6) {
+          display: none;
+        }
+      }
+      @include range-width(900px){
+        width: calc(100% / 4 - 24px * 3 / 4);
+        &:nth-child(n + 3) {
+          margin-left: 24px;
+        }
+        &:nth-child(n + 6) {
+          display: none;
+        }
+      };
+      img {
+        max-width: 100%;
+      }
+      h3 {
+        margin: 0;
+        display: inline-block;
+        text-align: left;
+        color: rgba(33, 89, 153, 1.00);
+        overflow: hidden;
+        height: 21px * 2;
+        line-height: 21px;
+      }
+    }
+    > h2 {
+      display: inline-block;
+      width: 100%;
+      text-align: left;
+      background-color: transparent;
+      color: white;
+      padding: 0;
+    }
+  }
+}
