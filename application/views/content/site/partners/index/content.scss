@@ -26,11 +26,14 @@
 }
 
 .right .items {
-  display: inline-block;
+  display: none;
   width: 100%;
   padding-top: 20px;
   padding-left: 20px;
   @include clearfix();
+  &.active {
+    display: inline-block;
+  }
   > * {
     display: inline-block;
     float: left;

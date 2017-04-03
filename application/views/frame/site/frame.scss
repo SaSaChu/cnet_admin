@@ -420,6 +420,7 @@ html {
       margin: 0;
       font-size: 40px;
       line-height: 120px;
+      @include overflow-docx3();
       @include range-width(0, 700px){
         text-align: center;
         width: 100%;

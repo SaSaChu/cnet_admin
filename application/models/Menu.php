@@ -17,13 +17,14 @@ class Menu extends OaModel {
   );
 
   static $belongs_to = array (
+    array ('parent', 'class_name' => 'Menu'),
     array ('lang', 'class_name' => 'Lang')
   );
 
   public function __construct ($attributes = array (), $guard_attributes = true, $instantiating_via_find = false, $new_record = true) {
     parent::__construct ($attributes, $guard_attributes, $instantiating_via_find, $new_record);
   }
-  public static function alls () {
+  public static function alls ($useLang = false) {
     return array_map (function ($menu) {
         return array (
             'id' => $menu->id,
@@ -36,7 +37,7 @@ class Menu extends OaModel {
                 );
             }, $menu->subs)
           );
-      }, Menu::all (array ('select' => 'id, name, lang_id, menu_id', 'include' => array ('subs'), 'conditions' => array ('menu_id = ?', 0))));
+      }, Menu::all (array ('select' => 'id, name, lang_id, menu_id', 'include' => array ('subs'), 'conditions' => $useLang ? array ('menu_id = ? AND lang_id = ?', 0, Lang::current ()->id) : array ('menu_id = ?', 0))));
   }
   public function destroy () {
     if ($this->subs)

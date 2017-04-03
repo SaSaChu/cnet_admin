@@ -7,7 +7,7 @@ $(function () {
   var $banners = $('#banner .banners');
   $('#banner .dots a').click (function () {
     $banners.attr ('class', 'banners n' + ($(this).index () + 1));
-    $(this).addClass ('active').siblings ().removeClass ();
+    $(this).addClass ('active').siblings ().removeClass ('active');
   }).first ().click ();
 
   setInterval (function () {

@@ -16,7 +16,6 @@ class Blog extends OaModel {
   );
 
   static $belongs_to = array (
-    array ('menu', 'class_name' => 'Menu'),
     array ('lang', 'class_name' => 'Lang')
   );
 

@@ -35,7 +35,7 @@ class Blogs extends Admin_controller {
 
     $limit = 10;
     $total = Blog::count (array ('conditions' => $conditions));
-    $objs = Blog::find ('all', array ('offset' => $offset < $total ? $offset : 0, 'limit' => $limit, 'include' => array ('lang', 'menu'), 'order' => 'id DESC', 'conditions' => $conditions));
+    $objs = Blog::find ('all', array ('offset' => $offset < $total ? $offset : 0, 'limit' => $limit, 'include' => array ('lang'), 'order' => 'id DESC', 'conditions' => $conditions));
 
     return $this->load_view (array (
         'objs' => $objs,

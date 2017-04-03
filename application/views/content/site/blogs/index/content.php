@@ -1,33 +1,22 @@
 <nav id='nav'>
   <div class='container'>
-    <h1>Blog</h1>
+    <h1><?php echo Lang::get ('news', 'title');?></h1>
   </div>
 </nav>
-
 
 <div id='main' class='n2'>
   <div class='container w2'>
     <div class='left'>
       
       <div class='items'>
-        <a href=''>
-          <h3>Gaziantep Tanıtım Toplantısı</h3>
-          <span>Ağ ürünlerinde 25 yılı aşkın tecrübesi ile yeniden Türkiye pazarına giren CNet ile güvenlik sistemleri konusunda 10 yıllık bilgi ve birikime sahip, tüketici elektroniğinin lider firmalarından Next&NextStar Gaziantep’te ortak bir organizasyonla bir araya gelerek misafirlerini ağırlayacaklar.</span>
-        </a>
-        <a href=''>
-          <h3>Gaziantep Tanıtım Toplantısı</h3>
-          <span>Ağ ürünlerinde 25 yılı aşkın tecrübesi ile yeniden Türkiye pazarına giren CNet ile güvenlik sistemleri konusunda 10 yıllık bilgi ve birikime sahip, tüketici elektroniğinin lider firmalarından Next&NextStar Gaziantep’te ortak bir organizasyonla bir araya gelerek misafirlerini ağırlayacaklar.</span>
-        </a>
-        <a href=''>
-          <h3>Gaziantep Tanıtım Toplantısı</h3>
-          <span>Ağ ürünlerinde 25 yılı aşkın tecrübesi ile yeniden Türkiye pazarına giren CNet ile güvenlik sistemleri konusunda 10 yıllık bilgi ve birikime sahip, tüketici elektroniğinin lider firmalarından Next&NextStar Gaziantep’te ortak bir organizasyonla bir araya gelerek misafirlerini ağırlayacaklar.</span>
-        </a>
-        <a href=''>
-          <h3>Gaziantep Tanıtım Toplantısı</h3>
-          <span>Ağ ürünlerinde 25 yılı aşkın tecrübesi ile yeniden Türkiye pazarına giren CNet ile güvenlik sistemleri konusunda 10 yıllık bilgi ve birikime sahip, tüketici elektroniğinin lider firmalarından Next&NextStar Gaziantep’te ortak bir organizasyonla bir araya gelerek misafirlerini ağırlayacaklar.</span>
-        </a>
+  <?php foreach ($blogs as $blog) { ?>
+          <a href='<?php echo base_url ('blog', $blog->id);?>'>
+            <h3><?php echo $blog->title;?></h3>
+            <span><?php echo $blog->mini_content (200);?></span>
+          </a>
+  <?php } ?>
         
-        <div class="pagination"> <ul><li class="active"><a href="#">1</a></li><li><a href="https://admin.zeusdesign.com.tw/admin/article-tags/25">2</a></li><li class="n"><a href="https://admin.zeusdesign.com.tw/admin/article-tags/25">下一頁</a></li></ul> </div>
+        <div class="pagination"><?php echo $pagination;?></div>
 
       </div>
 
@@ -35,18 +24,15 @@
     </div>
     <div class='right'>
       <div class='blogs'>
-        <div class='blog'>
-          <img src='http://127.0.0.1/case/cnet/Storage/Web/Original/c7511cbe-badb-4e36-8d9c-7975a2635f9d.jpg' />
-          <h3>Gaziantep Tanıtım Toplantısı</h3>
-          <p>Ağ ürünlerinde 25 yılı aşkın tecrübesi ile yeniden Türkiye pazarına giren CNet ile güvenlik sistemleri konusunda 10 yıllık bilgi ve birikime sahip, tüketici elektroniğinin lider firmalarından Next&NextStar Gaziantep’te ortak bir organizasyonla bir arHaberi Oku</p>
-          <a href="">Haberi Oku</a>
-        </div>
-        <div class='blog'>
-          <img src='http://127.0.0.1/case/cnet/Storage/Web/Original/c7511cbe-badb-4e36-8d9c-7975a2635f9d.jpg' />
-          <h3>Gaziantep Tanıtım Toplantısı</h3>
-          <p>Ağ ürünlerinde 25 yılı aşkın tecrübesi ile yeniden Türkiye pazarına giren CNet ile güvenlik sistemleri konusunda 10 yıllık bilgi ve birikime sahip, tüketici elektroniğinin lider firmalarından Next&NextStar Gaziantep’te ortak bir organizasyonla bir arHaberi Oku</p>
-          <a href="">Haberi Oku</a>
-        </div>
+
+  <?php foreach ($blogs as $blog) { ?>
+          <div class='blog'>
+            <img src='<?php echo $blog->cover->url ('400x400c');?>' />
+            <h3><?php echo $blog->title;?></h3>
+            <p><?php echo $blog->mini_content (250);?></p>
+            <a href="<?php echo base_url ('blog', $blog->id);?>"><?php echo Lang::get ('news', 'see_more');?></a>
+          </div>
+  <?php } ?>
       </div>
     </div>
   </div>

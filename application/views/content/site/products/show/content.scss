@@ -88,6 +88,9 @@
         color: rgba(0, 135, 191, 1.00);
         font-size: 20px;
         margin-top: 0;
+        display: inline-block;
+        width: 100%;
+        @include overflow-docx3();
       }
       > div {
         font-size: 13px;
@@ -142,6 +145,10 @@
     }
     &:nth-child(3){
       div {
+        a {
+          text-decoration: none;
+          color: rgba(119, 119, 119, 1.00);
+        }
         > * {
           &:nth-child(3) {
             cursor: pointer;
@@ -288,11 +295,13 @@
       h3 {
         margin: 0;
         display: inline-block;
+        width: 100%;
         text-align: left;
         color: rgba(33, 89, 153, 1.00);
         overflow: hidden;
         height: 21px * 2;
         line-height: 21px;
+        @include overflow-docx3();
       }
     }
     > h2 {

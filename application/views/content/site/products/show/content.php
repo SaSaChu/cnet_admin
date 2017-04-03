@@ -1,84 +1,59 @@
 <nav id='nav'>
   <div class='container'>
-    <h1>產品目錄</h1>
+    <h1><?php echo $product->title;?></h1>
   </div>
 </nav>
 
 <div id='main' class='n1'>
   <div class='container'>
     <div class='left'>
-      <img src='http://127.0.0.1/case/cnet/Storage/Web/Medium/0757c2ed-e3d2-4325-9545-7c4044b9b0b4.jpg'>
-      <img src='http://127.0.0.1/case/cnet/Storage/Web/Medium/0757c2ed-e3d2-4325-9545-7c4044b9b0b4.jpg'>
-      <img src='http://127.0.0.1/case/cnet/Storage/Web/Medium/0757c2ed-e3d2-4325-9545-7c4044b9b0b4.jpg'>
+<?php foreach ($product->images as $image) { ?>
+        <img src='<?php echo $image->name->url ('500x500c');?>'>
+<?php } ?>
     </div>
     <div class='right'>
 
       <div id='tabs'>
-        <a>概觀</a>
-        <a>一般特點</a>
-        <a>下載</a>
+        <a><?php echo Lang::get ('product', 'overview');?></a>
+        <a><?php echo Lang::get ('product', 'general_features');?></a>
+        <a><?php echo Lang::get ('product', 'downloadable');?></a>
       </div>
 
       <div id='panels'>
         <section>
-          <h2>5 Port Fast Ethernet Switch - CSH-500</h2>
+          <h2><?php echo $product->title;?></h2>
           
           <div>
-            <p>CSH-500 5-port 10/100Mbps Fast Ethernet Switch küçük ofis yada ev ofis ortamlarında kullanılmak üzere dizayn edilmiştir. Plastik kasaya sahip olan CSH-500 5 port fast ethernet switch, duvara yada masaüstünde çalıştırılmaya uygundur. Tak-Kullan özelliği ile kolay ve basit bir kurulumun yanı sıra, auto-negotiation kabiliyeti ve her portun ayrı ayrı full duplex modda 200Mbps vaad ettiği hızı ile CSH-500, 5 yada daha az kullanıcılı networklerde ve çok düşük bütçeli çözümlerde size göz kırpıyor.</p>
+            <?php echo $product->content;?>
           </div>
 
           <div id='features'>
-            <div>
-              <div><img src='http://127.0.0.1/case/cnet/Storage/Icon/Auto-Negotiation.png'></div>
-              <span>Auto-negotiation Desteği</span>
-              <p>5 port için Auto-Negotiation 5 port için Auto-NegotiationNegotiationNegotiationNegotiationNegotiationNegotiationNegotiationNegotiation fonksiyonufonksiyonu</p>
-            </div>
-            <div>
-              <div><img src='http://127.0.0.1/case/cnet/Storage/Icon/Auto-Negotiation.png'></div>
-              <span>Auto-negotiation Desteği</span>
-              <p>5 port için Auto-Negotiation fonksiyonu</p>
-            </div>
-            <div>
-              <div><img src='http://127.0.0.1/case/cnet/Storage/Icon/Auto-Negotiation.png'></div>
-              <span>Auto-negotiation Desteği</span>
-              <p>5 port için Auto-Negotiation fonksiyonu</p>
-            </div>
-            <div>
-              <div><img src='http://127.0.0.1/case/cnet/Storage/Icon/Auto-Negotiation.png'></div>
-              <span>Auto-negotiation Desteği</span>
-              <p>5 port için Auto-Negotiation fonksiyonu</p>
-            </div>
-          </div>
+      <?php foreach ($product->features as $feature) { ?>
+              <div>
+                <div><img src='<?php echo $feature->name->url ('100x100c');?>'></div>
+                <span><?php echo $feature->title;?></span>
+                <p><?php echo $feature->content;?></p>
+              </div>
+      <?php } ?>
         </section>
 
         <section>
-          <div>
-            <span>Ürün Adı</span>
-            <span class='icon-eject'></span>
-            <span>5-Port Fast Ethernet Switch5-Port Fast Ethernet Switch5-Port Fast Ethernet Switch5-Port Fast Ethernet Switch5-Port Fast Ethernet Switch5-Port Fast Ethernet Switch</span>
-          </div>
-          <div>
-            <span>Ürün Adı</span>
-            <span class='icon-eject'></span>
-            <span>5-Port Fast Ethernet Switch</span>
-          </div>
-          <div>
-            <span>Ürün Adı</span>
-            <span class='icon-eject'></span>
-            <span>5-Port Fast Ethernet Switch</span>
-          </div>
+    <?php foreach ($product->sources as $source) { ?>
+            <div>
+              <span><?php echo $source->title;?></span>
+              <span class='icon-eject'></span>
+              <span><?php echo $source->content;?></span>
+            </div>
+    <?php } ?>
         </section>
-        <section class='active'>
-          <div>
-            <span>Ürün Adı</span>
-            <span class='icon-eject'></span>
-            <a>5-Port Fast Ethernet Switch5-Port Fast Ethernet Switch5-Port Fast Ethernet Switch5-Port Fast Ethernet Switch5-Port Fast Ethernet Switch5-Port Fast Ethernet Switch</a>
-          </div>
-          <div>
-            <span>Ürün Adı</span>
-            <span class='icon-eject'></span>
-            <a>5-Port Fast Ethernet Switch</a>
-          </div>
+        <section>
+    <?php foreach ($product->downloads as $download) { ?>
+            <div>
+              <span><?php echo $download->title;?></span>
+              <span class='icon-eject'></span>
+              <a href='<?php echo $download->name->url ();?>' download><?php echo Lang::get ('product', 'downloadable');?></a>
+            </div>
+    <?php } ?>
         </section>
       </div>
 
@@ -88,56 +63,41 @@
 
 <div id='mores'>
   <div class='container'>
-    <h2>該產品是同類其他產品</h2>
-    <a href="">
-      <img src="http://127.0.0.1/case/cnet/Storage/Web/Original/3ea0e97d-e0a9-43b9-873e-344e49d32522.jpg">
-      <h3>CSH-524P 5-Port Fast Ethernet Switch 4 Port PoE+</h3>
-    </a>
-    <a href="">
-      <img src="http://127.0.0.1/case/cnet/Storage/Web/Original/3ea0e97d-e0a9-43b9-873e-344e49d32522.jpg">
-      <h3>CSH-524P 5-Port Fast Ethernet Switch 4 Port PoE+</h3>
-    </a>
-    <a href="">
-      <img src="http://127.0.0.1/case/cnet/Storage/Web/Original/3ea0e97d-e0a9-43b9-873e-344e49d32522.jpg">
-      <h3>CSH-524P 5-Port Fast Ethernet Switch 4 Port PoE+</h3>
-    </a>
-    <a href="">
-      <img src="http://127.0.0.1/case/cnet/Storage/Web/Original/3ea0e97d-e0a9-43b9-873e-344e49d32522.jpg">
-      <h3>CSH-524P 5-Port Fast Ethernet Switch 4 Port PoE+</h3>
-    </a>
-    <a href="">
-      <img src="http://127.0.0.1/case/cnet/Storage/Web/Original/3ea0e97d-e0a9-43b9-873e-344e49d32522.jpg">
-      <h3>CSH-524P 5-Port Fast Ethernet Switch 4 Port PoE+</h3>
-    </a>
+    <h2><?php echo Lang::get ('product', 'more');?></h2>
+<?php
+    foreach ($mores as $more) { ?>
+      <a href="<?php echo base_url ('product', $more->id);?>">
+  <?php if ($more->images) { ?>
+          <img src="<?php echo $more->images[0]->name->url ('500x500c');?>">
+  <?php } ?>
+        <h3><?php echo $more->title;?></h3>
+      </a>
+<?php
+    } ?>
   </div>
 </div>
-
 
 
 <div id='blog'>
   <div class='container'>
     <div>
-      <h3>Cnet 新聞</h3>
-      <a href="">
-        <h4>Gaziantep Tanıtım Toplantısı</h4>
-        <p>Ağ ürünlerinde 25 yılı aşkın tecrübesi ile yeniden Türkiye pazarına giren CNet ile güvenlik sistemleri konusunda 10 yıllık bilgi ve birikime sahip, tüketici elektroniğinin lider firmalarından Next&NextStar Gaziantep’te ortak bir organizasyonla bir araya gelerek misafirlerini ağırlayacaklar.</p>
-      </a>
-      <a href="">
-        <h4>Gaziantep Tanıtım Toplantısı</h4>
-        <p>Ağ ürünlerinde 25 yılı aşkın tecrübesi ile yeniden Türkiye pazarına giren CNet ile güvenlik sistemleri konusunda 10 yıllık bilgi ve birikime sahip, tüketici elektroniğinin lider firmalarından Next&NextStar Gaziantep’te ortak bir organizasyonla bir araya gelerek misafirlerini ağırlayacaklar.</p>
-      </a>
-      <a href="">
-        <h4>Gaziantep Tanıtım Toplantısı</h4>
-        <p>Ağ ürünlerinde 25 yılı aşkın tecrübesi ile yeniden Türkiye pazarına giren CNet ile güvenlik sistemleri konusunda 10 yıllık bilgi ve birikime sahip, tüketici elektroniğinin lider firmalarından Next&NextStar Gaziantep’te ortak bir organizasyonla bir araya gelerek misafirlerini ağırlayacaklar.</p>
-      </a>
-      <a href="">Tümünü Gör</a>
+      <h3><?php echo Lang::get ('index', 'cnet_news');?></h3>
+<?php foreach (Blog::find ('all', array ('limit' => 3, 'conditions' => array ('lang_id = ?', Lang::current ()->id))) as $blog) { ?>
+        <a href="<?php echo base_url ('blog', $blog->id);?>">
+          <h4><?php echo $blog->title;?></h4>
+          <p><?php echo $blog->mini_content ();?></p>
+        </a>
+<?php } ?>
+
+      <a href="<?php echo base_url ('blogs');?>"><?php echo Lang::get ('index', 'see_more');?></a>
     </div>
     <div>
-      <h3>關於Cnet</h3>
+      <h3><?php echo Lang::get ('index', 'cnet_turkey');?></h3>
       <div>
         <img src='http://127.0.0.1/case/cnet/Images/welcome.jpg' />
-        <p>1987 de kurulan ve ürettiği network ekipmanlarıyla global pazarda önemli bir yere sahip olan CNet, ABD ve Uluslararası pazarlarda yüksek kaliteli ürünleriyle kendini zirveye taşımıştır. Türkiye piyasasına yabancı olmayan CNet, Next&NextStar ile yapmış olduğu distribütörlük anlaşmasıyla birlikte Next&NextStar güvencesiyle yeniden Türkiye-de.</p>
+        <p><?php echo Lang::get ('index', 'desc');?></p>
       </div>
     </div>
   </div>
 </div>
+

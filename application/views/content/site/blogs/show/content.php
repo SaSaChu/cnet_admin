@@ -4,23 +4,17 @@
     <article>
       <header>
         <div>
-          <h1>Gaziantep Tanıtım Toplantısı</h1>
-          <time>@ 05.03.2016 15:07</time>
+          <h1><?php echo $blog->title;?></h1>
+          <time>@ <?php echo $blog->created_at->format ('m.d.Y H:i');?></time>
         </div>
-        <a href="">返回</a>
+        <a href="<?php echo base_url ('blogs');?>"><?php echo Lang::get ('news', 'back');?></a>
       </header>
 
       <div>
         <aside>
-          <img src='http://127.0.0.1/case/cnet/Storage/Web/Original/c7511cbe-badb-4e36-8d9c-7975a2635f9d.jpg' />
+          <img src='<?php echo $blog->cover->url ('400x400c');?>' />
         </aside>
-        <section>
-          <p>Ağ ürünlerinde 25 yılı aşkın tecrübesi ile yeniden Türkiye pazarına giren CNet ile güvenlik sistemleri konusunda 10 yıllık bilgi ve birikime sahip, tüketici elektroniğinin lider firmalarından Next&NextStar Gaziantep’te ortak bir organizasyonla bir araya gelerek misafirlerini ağırlayacaklar.</p>
-          <p>Ağ ürünlerinde 25 yılı aşkın tecrübesi ile yeniden Türkiye pazarına giren CNet ile güvenlik sistemleri konusunda 10 yıllık bilgi ve birikime sahip, tüketici elektroniğinin lider firmalarından Next&NextStar Gaziantep’te ortak bir organizasyonla bir araya gelerek misafirlerini ağırlayacaklar.</p>
-          <p>Ağ ürünlerinde 25 yılı aşkın tecrübesi ile yeniden Türkiye pazarına giren CNet ile güvenlik sistemleri konusunda 10 yıllık bilgi ve birikime sahip, tüketici elektroniğinin lider firmalarından Next&NextStar Gaziantep’te ortak bir organizasyonla bir araya gelerek misafirlerini ağırlayacaklar.</p>
-          <p>Ağ ürünlerinde 25 yılı aşkın tecrübesi ile yeniden Türkiye pazarına giren CNet ile güvenlik sistemleri konusunda 10 yıllık bilgi ve birikime sahip, tüketici elektroniğinin lider firmalarından Next&NextStar Gaziantep’te ortak bir organizasyonla bir araya gelerek misafirlerini ağırlayacaklar.</p>
-          <p>Ağ ürünlerinde 25 yılı aşkın tecrübesi ile yeniden Türkiye pazarına giren CNet ile güvenlik sistemleri konusunda 10 yıllık bilgi ve birikime sahip, tüketici elektroniğinin lider firmalarından Next&NextStar Gaziantep’te ortak bir organizasyonla bir araya gelerek misafirlerini ağırlayacaklar.</p>
-        </section>
+        <section><?php echo $blog->content;?></section>
       </div>
     </article>
   </div>

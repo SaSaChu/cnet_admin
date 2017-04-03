@@ -5,9 +5,11 @@
  * @copyright   Copyright (c) 2016 OA Wu Design
  */
 
-class Dealers extends Site_controller {
+class Partners extends Site_controller {
 
   public function index () {
-    $this->load_view ();
+    return $this->load_view (array (
+        'now' => 'partner'
+      ));
   }
 }

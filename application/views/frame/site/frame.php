@@ -18,8 +18,8 @@
     <div id='top'>
       <div class='container'>
         <div>+90 216 592 98 00</div>
-        <form>
-          <input type='search' name='search' placeholder='<?php echo Lang::get ('frame', 'search_input');?>...' />
+        <form action='search' method='get'>
+          <input type='search' name='q' placeholder='<?php echo Lang::get ('frame', 'search_input');?>...' value='<?php echo isset ($q) && $q ? $q : '';?>' />
           <button typ='submit' class='icon-search'></button>
         </form>
         <span class='lang'>
@@ -41,12 +41,12 @@
         </a>
         <div class='menu n6'>
           <div>
-            <a href=''><?php echo Lang::get ('frame', 'pages', 'index');?></a>
-            <a href=''><?php echo Lang::get ('frame', 'pages', 'about');?></a>
-            <a href=''><?php echo Lang::get ('frame', 'pages', 'news');?></a>
-            <a href=''><?php echo Lang::get ('frame', 'pages', 'support');?></a>
-            <a href=''><?php echo Lang::get ('frame', 'pages', 'product');?></a>
-            <a href=''><?php echo Lang::get ('frame', 'pages', 'partner');?></a>
+            <a<?php echo isset ($now) && $now && $now == 'index' ? ' class="active"' : '';?> href='<?php echo base_url ();?>'><?php echo Lang::get ('frame', 'pages', 'index');?></a>
+            <a<?php echo isset ($now) && $now && $now == 'about' ? ' class="active"' : '';?> href='<?php echo base_url ('about');?>'><?php echo Lang::get ('frame', 'pages', 'about');?></a>
+            <a<?php echo isset ($now) && $now && $now == 'news' ? ' class="active"' : '';?> href='<?php echo base_url ('blogs');?>'><?php echo Lang::get ('frame', 'pages', 'news');?></a>
+            <a<?php echo isset ($now) && $now && $now == 'support' ? ' class="active"' : '';?> href='<?php echo base_url ();?>'><?php echo Lang::get ('frame', 'pages', 'support');?></a>
+            <a<?php echo isset ($now) && $now && $now == 'product' ? ' class="active"' : '';?> href='<?php echo base_url ('products');?>'><?php echo Lang::get ('frame', 'pages', 'product');?></a>
+            <a<?php echo isset ($now) && $now && $now == 'partner' ? ' class="active"' : '';?> href='<?php echo base_url ('partners');?>'><?php echo Lang::get ('frame', 'pages', 'partner');?></a>
           </div>
         </div>
         <label class='icon-menu' for='menu_ckb'></label>

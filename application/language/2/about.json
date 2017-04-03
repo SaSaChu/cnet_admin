@@ -1,0 +1,62 @@
+{
+  "items": [
+    "About CNet",
+    "Mission",
+    "Customers",
+    "Customer happiness",
+    "Sales & Marketing",
+    "Service",
+    "Productionet"
+  ],
+  "details": [
+    {
+      "title": "CNet",
+      "contents": [
+        "CNet Technology is a company that manufactures network equipment in 1987 in San Jose, California. It has an important customer base in USA and International market with high quality products produced in Ethernet, Fast ethernet and Gigabit network areas and is an important producer of global market.",
+        "CNet, home networking and high power networking products offer high speed and efficiency and provide customers with cost effective solutions.   In addition to the safety, reliability, ease of use and limitations that the products provide, they meet your wide range of requirements with the quality of service they provide.",
+        "Fast Ethernet Cards, Fast Ethernet Switches, Gigabit Ethernet Cards, Gigabit Ethernet Switches, Gigabit ethernet switches for dual-layer SNMP management, Wireless networking products, SOHO products for CNEs, government agencies, companies, small and medium sized businesses, small offices and home offices And SMB Broadband Routers, and more, with more than 20 years of experience in a wide range of products."
+      ]
+    },
+    {
+      "title": "Mission",
+      "contents": [
+        "CNET has set the mission to deliver powerful network and communications products for the global community to end users in the framework of excellence and reliability, along with strong technical and sales infrastructure support."
+      ]
+    },
+    {
+      "title": "Customers",
+      "contents": [
+        "CNet has won home users, small businesses, corporate customers, original equipment manufacturers, distributors and distributors around the world with its products for more than 20 years. It has existed in many product groups due to its significant performance, quality and cost advantages in many sectors, especially in energy, finance, technology sector and government institutions.",
+        "CNet products include national and regional distributors, distributors such as Walmart.com and Amazon.com, national distributors such as Next & NextStar, Tech Data, SED, Eastern Data, MaLabs and Amax and distributors such as Intcomex, Centel, CT, Bell Micro, SED-LA, Tecnomega, TD It is sold by international vendors such as Uraguay and SAZ."
+      ]
+    },
+    {
+      "title": "Customer happiness",
+      "contents": [
+        "CNet makes a great effort for the absolute satisfaction of the customers who meet with their products. Products are subject to an intensive testing process that is specially designed to uncover all existing problems and resolve them quickly by interfering with the end user. These meticulous procedures are crucial for CNet to increase the quality of CNet products and build confidence on the customer side."
+      ]
+    },
+    {
+      "title": "Sales & Marketing",
+      "contents": [
+        "CNet is an international company with many offices around the world, mainly USA, Latin America, Mexico and Taiwan, and experienced sales teams in Tampa, Florida and San Jose, California.",
+        "CNET has reached distribution points with distribution agreements it has made and distributorship agreements signed with leading companies in the world.",
+        "Companies such as Intcomex, Centel, CT, Bell Micro, SED-LA, Tecnomega, TD-Uraguay, SAZ, Next & NextStar, Tech Data, SED, Eastern Data, MaLabs, Amax, Walmart.com and Amazon.com stand out."
+      ]
+    },
+    {
+      "title": "Servis",
+      "contents": [
+        "Cnet attaches great importance to the customer's opinions of its products after the product sales process for high customer satisfaction. For this reason, he created follow-up and technical support services. Free technical and installation support is provided within these services.",
+        "CNet is always ready to provide free technical support during the installation of complex network designs with professional staff. Hardware replacement, hardware repair and online technical support services are also available.",
+        "Users can access CNet via CNet's official website www.cnetusa.com. In addition, downloadable drivers on the site, software updates, a knowledge base consisting of frequently asked questions and technical documents where technical information is shared can be reached."
+      ]
+    },
+    {
+      "title": "Production",
+      "contents": [
+        "CNet fully integrates the design and final manufacturing processes of the products to increase the quality and reliability of the products. In addition, products that pass through the entire production process are produced with the principle of \"zero error\" with the latest technology development processes. Products are produced in three large production facilities in Taiwan and China. These facilities are equipped with the latest technologically produced devices and these devices are updated periodically. Compaq is ISO 9001 certified with the production requirements being ensured."
+      ]
+    }
+  ]
+}

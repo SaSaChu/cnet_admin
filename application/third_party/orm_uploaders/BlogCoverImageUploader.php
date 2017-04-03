@@ -10,7 +10,8 @@ class BlogCoverImageUploader extends OrmImageUploader {
   public function getVersions () {
     return array (
         '' => array (),
-        '100x100c' => array ('adaptiveResizeQuadrant', 100, 100, 'c')
+        '100x100c' => array ('adaptiveResizeQuadrant', 100, 100, 'c'),
+        '400x400c' => array ('adaptiveResizeQuadrant', 400, 400, 'c')
       );
   }
 }
