@@ -15,7 +15,7 @@ class Migration_Set_langs extends CI_Migration {
     $this->db->query (
       "INSERT INTO `langs` (`id`, `name`, `code`, `updated_at`, `created_at`)
         VALUES
-          (NULL, '英文', 'cn', '2017-04-04 20:41:26', '2017-04-04 20:41:26');"
+          (NULL, '英文', 'en', '2017-04-04 20:41:26', '2017-04-04 20:41:26');"
     );
     $this->db->query (
       "INSERT INTO `langs` (`id`, `name`, `code`, `updated_at`, `created_at`)

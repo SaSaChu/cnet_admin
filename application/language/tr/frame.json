@@ -1,0 +1,93 @@
+{
+  "search_input": "şunu arıyorum..",
+  "pages":{
+    "index": "Anasayfa",
+    "about": "Kurumsal",
+    "news": "Blog",
+    "support": "Destek",
+    "product": "Ürünler",
+    "partner": "Partnerlerimiz"
+    },
+  "about":[
+      {
+        "name": "Kurumsal",
+        "subs": {
+          "cnet": {
+            "text": "CNET",
+            "href": ""  
+          },
+          "mission": {
+            "text": "Misyon",
+            "href": ""  
+          },
+          "customers": {
+            "text": "Müşteriler",
+            "href": ""  
+          },
+          "customer_happiness": {
+            "text": "Müşteri Memnuniyeti",
+            "href": ""  
+          },
+          "sales_marketing": {
+            "text": "Satış ve Pazarlama",
+            "href": ""  
+          },
+          "service": {
+            "text": "Servis",
+            "href": ""  
+          },
+          "production": {
+            "text": "Üretim",
+            "href": "" 
+          }
+        }
+      },
+      {
+        "name": "HlZLI MENÜ",
+        "subs": {
+          "home_page": {
+            "text": "Anasayfa",
+            "href": ""
+          },
+          "products": {
+            "text": "Ürünler",
+            "href": ""
+          },
+          "our_partners": {
+            "text": "Partnerlerimiz",
+            "href": ""
+          },
+          "blog": {
+            "text": "Blog",
+            "href": ""
+          },
+          "corporate": {
+            "text": "Kurumsal",
+            "href": ""
+          },
+          "support": {
+            "text": "Destek",
+            "href": ""
+          },
+          "contact": {
+            "text": "İletişim",
+            "href": ""
+          }
+        }
+      },
+      {
+        "name": "İLETİŞİM",
+        "subs": {
+          "address": {
+            "text": "Battalgazi Mah. Basra Cad. No:16-22 Kat:2",
+            "href": ""
+          },
+          "phone": {
+            "text": "info@myspotcam.com",
+            "href": ""
+          }
+        }
+      }
+  ],
+  "copyright": "© 2015 Copyright, CNet Technology Corporation. All Rights Reserved."
+}

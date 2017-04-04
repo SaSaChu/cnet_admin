@@ -1,0 +1,57 @@
+{
+  "items": [
+    "CNet",
+    "Misyon",
+    "Müşteriler",
+    "Müşteri Memnuniyeti",
+    "Satış ve Pazarlama",
+    "Servis",
+    "Üretim"
+  ],
+  "details": [
+    {
+      "title": "CNet",
+      "contents": [
+        "CNet Teknoloji, 1987 yılında California San Jose’de kurulan network ekipmanları üreten bir şirkettir. Ethernet, Fast ethernet ve Gigabit network alanlarında ürettiği yüksek kaliteli ürünlerle ABD ve Uluslararası pazarda önemli bir müşteri kitlesine sahip olup global pazarın önemli bir üreticisidir.",
+        "CNet, home networking ve high power networking ürünlerinin sunduğu yüksek hız ve verimlilik ile müşterilerine düşük maliyetlerle etkin çözümler üretmektedir.  Ayrıca ürünlerin sağladığı güvenlik, güvenilirlik, kullanım kolaylığı, sınırlandırılabilir özelliklerinin yanında sağladığı servis kalitesiyle geniş çaplı taleplerinizi karşılamaktadır.",
+        "CNet, devlet kurumları, şirketler, küçük ve orta ölçekli işletmeler, küçük ofisler ve ev ofisleri için ürettiği Fast Ethernet Kartları, Fast Ethernet Swichleri, Gigabit Ethernet Kartları, Gigabit Ethernet Switchleri, Çift katmanlı SNMP yönetimi sağlayan Gigabit ethernet switchleri, Kablosuz ağ ürünleri, SOHO ve SMB Broadband Routerları ve daha bir çok alanda hizmet verdiği geniş ürün yelpazesine 20 yılı aşan deneyimini ekleyerek müşterilerine güvenle hizmet vermektedir."
+      ]
+    },
+    {
+      "title": "Misyon",
+      "contents": [
+        "CNet, global toplumun kullanımı için ürettiği güçlü network ve iletişim ürünlerini güçlü teknik ve satış altyapısı desteğiyle birlikte mükemmeliyet ve güvenilirlik çerçevesinde son kullanıcılara ulaştırmayı misyon olarak belirlemiştir."
+      ]
+    },
+    {
+      "title": "Müşteriler",
+      "contents": [
+        "CNet, 20 yılı aşkın bir süredir ürünleriyle dünya çapındaki ev kullanıcıları, küçük işletmeler, kurumsal müşteriler, orjinal ekipman üreticileri, distribütörler ve bayiler kazandı. Enerji, finans, teknoloji sektöründeki işletmeler ve devlet kurumları başta olmak üzere bir çok sektörde önemli performans, kalite ve maliyet avantajları dolayısıyla bir çok ürün grubuyla var olmuştur."
+      ]
+    },
+    {
+      "title": "Müşteri Memnuniyeti",
+      "contents": [
+        "CNet, ürünleriyle buluşan müşterinin mutlak memnuniyeti için büyük bir gayret sarfeder. Ürünler son kullanıcıyla buluşması öncesinde mevcut tüm sorunların ortaya çıkarılması ve hızla müdahale edilerek sorunların çözülmesi için özel tasarlanmış yoğun bir test sürecine tabi tutulurlar. Bu titiz prosedürler CNet ürünlerinin kalitesinin artırılması ve müşteri tarafında yüksek seviyede güven oluşturması CNet için oldukça önemlidir."
+      ]
+    },
+    {
+      "title": "Satış ve Pazarlama",
+      "contents": [
+        "CNet dünya genelinde başta ABD, Latin Amerika, Meksika ve Tayvan olmak üzere bir çok ofisi ve ABD'de Tampa, Florida ve San Jose California'da bulunan tecrübeli satış ekipleriyle uluslararası bir şirkettir."
+      ]
+    },
+    {
+      "title": "Servis",
+      "contents": [
+        "Cnet yüksek seviyede müşteri memnuniyeti için ürünün satış süreci sonrasında da ürünlerinin müşteri tarafındaki görüşlerine büyük önem verir. Bu sebeple takip ve teknik destek hizmetleri oluşturmuştur. Bu hizmetler kapsamında ücretsiz teknik ve kurulum desteği verilmektedir."
+      ]
+    },
+    {
+      "title": "Üretim",
+      "contents": [
+        "CNet ürünlerin kalite ve güvenirliğinin artırılması için ürünlerin tasarım ve son imalat süreçlerini tamamen birleştirir. Ayrıca tüm üretim sürecinden geçen ürünler en son teknoloji geliştirme süreçleriyle \"sıfır hata\" mantığıyla üretilmektedir. Ürünler Tayvan ve Çin'deki üç büyük üretim tesislerinde üretilmektedir. Bu tesislerde en yeni teknolojide üretilmiş cihazlar kullanılmakla birlikte periyodik olarak bu cihazlar güncellenmektedir. Compaq üretim gereklilikleri sağlanmakla birlikte ISO 9001 sertifika sahibidir."
+      ]
+    }
+  ]
+}
