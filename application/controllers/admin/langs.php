@@ -98,6 +98,9 @@ class Langs extends Admin_controller {
   private function _validation_create (&$posts) {
     if (!isset ($posts['name'])) return '沒有填寫 名稱！';
     if (!(is_string ($posts['name']) && ($posts['name'] = trim ($posts['name'])))) return '名稱 格式錯誤！';
+    
+    if (!isset ($posts['code'])) return '沒有填寫 代碼！';
+    if (!(is_string ($posts['code']) && ($posts['code'] = trim ($posts['code'])))) return '代碼 格式錯誤！';
     return '';
   }
   private function _validation_update (&$posts) {

@@ -12,6 +12,12 @@
         <input type='text' name='name' value='<?php echo isset ($posts['name']) ? $posts['name'] : '';?>' placeholder='請輸入名稱..' maxlength='200' pattern='.{1,200}' required title='輸入名稱!' autofocus />
       </div>
     </div>
+    <div class='row n2'>
+      <label>* 代碼</label>
+      <div>
+        <input type='text' name='code' value='<?php echo isset ($posts['code']) ? $posts['code'] : '';?>' placeholder='請輸入代碼..' maxlength='200' pattern='.{1,200}' required title='輸入代碼!' />
+      </div>
+    </div>
 
     <div class='btns'>
       <div class='row n2'>

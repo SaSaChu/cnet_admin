@@ -27,7 +27,7 @@ class Lang extends OaModel {
   public static function get () {
     if (!$keys = func_get_args ()) return '';
     
-    if (!isJson ($file = read_file ($path = FCPATH . 'application' . DIRECTORY_SEPARATOR . 'language' . DIRECTORY_SEPARATOR . Lang::current ()->id . DIRECTORY_SEPARATOR . array_shift ($keys) . '.json')))
+    if (!isJson ($file = read_file ($path = FCPATH . 'application' . DIRECTORY_SEPARATOR . 'language' . DIRECTORY_SEPARATOR . Lang::current ()->code . DIRECTORY_SEPARATOR . array_shift ($keys) . '.json')))
       exit ('語言包有誤');
 
     $file = json_decode ($file, true);

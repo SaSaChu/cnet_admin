@@ -45,7 +45,8 @@
         <tr>
           <th width='80'>#</th>
           <th >名稱</th>
-          <th width='105' class='right'>修改/刪除</th>
+          <th width='110'>語言包代碼</th>
+          <th width='85' class='right'>修改/刪除</th>
         </tr>
       </thead>
       <tbody>
@@ -54,9 +55,8 @@
             <tr>
               <td><?php echo $obj->id;?></td>
               <td><?php echo $obj->name;?></td>
+              <td><?php echo $obj->code;?></td>
               <td class='right'>
-                <a class='icon-r' href="<?php echo base_url ('admin', 'menu', $obj->id, 'menus');?>"></a>
-                /
                 <a class='icon-e' href="<?php echo base_url ($uri_1, $obj->id, 'edit');?>"></a>
                 /
                 <a class='icon-t' href="<?php echo base_url ($uri_1, $obj->id);?>" data-method='delete'></a>
