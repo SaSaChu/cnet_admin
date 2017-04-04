@@ -18,7 +18,7 @@
     <div id='top'>
       <div class='container'>
         <div>+90 216 592 98 00</div>
-        <form action='search' method='get'>
+        <form action='<?php echo base_url ('search');?>' method='get'>
           <input type='search' name='q' placeholder='<?php echo Lang::get ('frame', 'search_input');?>...' value='<?php echo isset ($q) && $q ? $q : '';?>' />
           <button typ='submit' class='icon-search'></button>
         </form>
