@@ -36,9 +36,9 @@ class Main extends Site_controller {
         'pagination' => $this->_get_pagination ($limit, $total, $configs),
       ));
   }
-  public function about ($step = 0) {
+  public function about () {
+    
     return $this->load_view (array (
-        'step' => $step,
         'now' => 'about'
       ));
   }
