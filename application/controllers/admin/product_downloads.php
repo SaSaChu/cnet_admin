@@ -138,7 +138,7 @@ class Product_downloads extends Admin_controller {
   }
   private function _validation_create (&$posts, &$name) {
     if (!isset ($name)) return '沒有選擇 檔案！';
-    if (!is_upload_image_format ($name, 20 * 1024 * 1024, array ('gif', 'jpeg', 'jpg', 'png', 'ppt', 'pptx', 'doc', 'docx', 'xls', 'xlsx', 'pdf', 'zip'))) return '檔案 格式錯誤！';
+    if (!is_upload_image_format ($name, 20 * 1024 * 1024, array ('gif', 'jpeg', 'jpg', 'png', 'ppt', 'pptx', 'doc', 'docx', 'xls', 'xlsx', 'pdf', 'zip', 'rar'))) return '檔案 格式錯誤！';
 
     if (!isset ($posts['title'])) return '沒有填寫 標題！';
     if (!(is_string ($posts['title']) && ($posts['title'] = trim ($posts['title'])))) return '標題 格式錯誤！';
@@ -147,7 +147,7 @@ class Product_downloads extends Admin_controller {
   }
   private function _validation_update (&$posts, &$name, $obj) {
     if (!((string)$obj->name || isset ($name))) return '沒有選擇 檔案！';
-    if ($name && !is_upload_image_format ($name, 20 * 1024 * 1024, array ('gif', 'jpeg', 'jpg', 'png', 'ppt', 'pptx', 'doc', 'docx', 'xls', 'xlsx', 'pdf', 'zip'))) return '檔案 格式錯誤！';
+    if ($name && !is_upload_image_format ($name, 20 * 1024 * 1024, array ('gif', 'jpeg', 'jpg', 'png', 'ppt', 'pptx', 'doc', 'docx', 'xls', 'xlsx', 'pdf', 'zip', 'rar'))) return '檔案 格式錯誤！';
 
     if (!isset ($posts['title'])) return '沒有填寫 標題！';
     if (!(is_string ($posts['title']) && ($posts['title'] = trim ($posts['title'])))) return '標題 格式錯誤！';
