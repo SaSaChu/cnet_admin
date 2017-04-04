@@ -45,6 +45,9 @@ class Main extends Site_controller {
   public function index () {
     return $this->load_view (array (
         'now' => 'index',
+        'blogs' => Blog::find ('all', array ('limit' => 3, 'conditions' => array ('lang_id = ?', Lang::current ()->id))),
+        'menus' => Menu::find ('all', array ('conditions' => array ('menu_id = ? AND lang_id = ?', 0, Lang::current ()->id))),
+        'banners' => Banner::find ('all', array ('conditions' => array ('lang_id = ?', Lang::current ()->id))),
         'products' => Product::find ('all', array ('select' => 'id, cover1, cover2, cover3, title', 'limit' => 4, 'order' => 'id DESC', 'conditions' => array ('lang_id = ?', Lang::current ()->id))),
       ));
   }
