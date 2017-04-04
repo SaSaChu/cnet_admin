@@ -66,7 +66,7 @@
         <div>
           <h3><?php echo Lang::get ('index', 'cnet_turkey');?></h3>
           <div>
-            <img src='http://127.0.0.1/case/cnet/Images/welcome.jpg' />
+            <img src='<?php echo base_url ('resource', 'image', 'welcome.jpg');?>' />
             <p><?php echo Lang::get ('index', 'desc');?></p>
           </div>
         </div>
