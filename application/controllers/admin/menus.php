@@ -34,7 +34,7 @@ class Menus extends Admin_controller {
 
     $limit = 25;
     $total = Menu::count (array ('conditions' => $conditions));
-    $objs = Menu::find ('all', array ('offset' => $offset < $total ? $offset : 0, 'limit' => $limit, 'order' => 'sort DESC', 'include' => array ('subs', 'lang'), 'conditions' => $conditions));
+    $objs = Menu::find ('all', array ('offset' => $offset < $total ? $offset : 0, 'limit' => $limit, 'order' => 'sort ASC', 'include' => array ('subs', 'lang'), 'conditions' => $conditions));
 
     return $this->load_view (array (
         'objs' => $objs,

@@ -13,7 +13,7 @@ class Menu extends OaModel {
   );
 
   static $has_many = array (
-    array ('subs', 'class_name' => 'Menu', 'order' => 'sort DESC')
+    array ('subs', 'class_name' => 'Menu', 'order' => 'sort ASC')
   );
 
   static $belongs_to = array (
