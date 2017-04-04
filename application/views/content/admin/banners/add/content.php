@@ -31,7 +31,7 @@
 
 
     <div class='row n2'>
-      <label>* 鏈結</label>
+      <label>鏈結</label>
       <div>
         <input type='text' name='link' value='<?php echo isset ($posts['link']) ? $posts['link'] : '';?>' placeholder='請輸入鏈結..' maxlength='200' pattern='.{1,200}' required title='輸入鏈結!' autofocus />
       </div>

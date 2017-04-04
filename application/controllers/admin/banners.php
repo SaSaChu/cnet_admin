@@ -98,22 +98,20 @@ class Banners extends Admin_controller {
     return redirect_message (array ($this->uri_1), array ('_flash_info' => '刪除成功！'));
   }
   private function _validation_create (&$posts, &$cover) {
-    if (!isset ($posts['link'])) return '沒有填寫 鏈結！';
+    if (!isset ($posts['link'])) $posts['link'] = '';
     if (!isset ($cover)) return '沒有選擇 封面！';
     if (!isset ($posts['lang_id'])) return '沒有填寫 語系！';
     
-    if (!(is_string ($posts['link']) && ($posts['link'] = trim ($posts['link'])))) return '鏈結 格式錯誤！';
     if (!is_upload_image_format ($cover, 20 * 1024 * 1024, array ('gif', 'jpeg', 'jpg', 'png'))) return '封面 格式錯誤！';
     if (!(is_numeric ($posts['lang_id']) && ($posts['lang_id'] = trim ($posts['lang_id'])) && Lang::find_by_id ($posts['lang_id']))) return '語系 格式錯誤！';
 
     return '';
   }
   private function _validation_update (&$posts, &$cover, $obj) {
-    if (!isset ($posts['link'])) return '沒有填寫 鏈結！';
+    if (!isset ($posts['link'])) $posts['link'] = '';
     if (!((string)$obj->cover || isset ($cover))) return '沒有選擇 封面！';
     if (!isset ($posts['lang_id'])) return '沒有填寫 語系！';
     
-    if (!(is_string ($posts['link']) && ($posts['link'] = trim ($posts['link'])))) return '鏈結 格式錯誤！';
     if ($cover && !is_upload_image_format ($cover, 20 * 1024 * 1024, array ('gif', 'jpeg', 'jpg', 'png'))) return '封面 格式錯誤！';
     if (!(is_numeric ($posts['lang_id']) && ($posts['lang_id'] = trim ($posts['lang_id'])) && Lang::find_by_id ($posts['lang_id']))) return '語系 格式錯誤！';
 

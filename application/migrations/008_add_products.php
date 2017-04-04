@@ -13,6 +13,10 @@ class Migration_Add_products extends CI_Migration {
         `lang_id` int(11) unsigned NOT NULL DEFAULT 0 COMMENT '語系 ID',
         `menu_id` int(11) unsigned NOT NULL DEFAULT 0 COMMENT 'Menu ID, root = 0',
         
+        `cover1` varchar(50) COLLATE utf8_unicode_ci NOT NULL DEFAULT '' COMMENT '封面 1',
+        `cover2` varchar(50) COLLATE utf8_unicode_ci NOT NULL DEFAULT '' COMMENT '封面 2',
+        `cover3` varchar(50) COLLATE utf8_unicode_ci NOT NULL DEFAULT '' COMMENT '封面 3',
+        
         `title` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '' COMMENT '標題',
         `content` text NOT NULL COMMENT '內容',
 

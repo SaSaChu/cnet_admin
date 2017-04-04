@@ -7,9 +7,9 @@
 <div id='main' class='n1'>
   <div class='container'>
     <div class='left'>
-<?php foreach ($product->images as $image) { ?>
-        <img src='<?php echo $image->name->url ('500x500c');?>'>
-<?php } ?>
+      <img src='<?php echo $product->cover1->url ('500x500c');?>'>
+      <img src='<?php echo $product->cover2->url ('500x500c');?>'>
+      <img src='<?php echo $product->cover3->url ('500x500c');?>'>
     </div>
     <div class='right'>
 
@@ -67,9 +67,7 @@
 <?php
     foreach ($mores as $more) { ?>
       <a href="<?php echo base_url ('product', $more->id);?>">
-  <?php if ($more->images) { ?>
-          <img src="<?php echo $more->images[0]->name->url ('500x500c');?>">
-  <?php } ?>
+        <img src="<?php echo $more->cover1->url ('500x500c');?>">
         <h3><?php echo $more->title;?></h3>
       </a>
 <?php

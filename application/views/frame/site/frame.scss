@@ -418,7 +418,7 @@ html {
       color: white;
       text-align: left;
       margin: 0;
-      font-size: 40px;
+      font-size: 30px;
       line-height: 120px;
       @include overflow-docx3();
       @include range-width(0, 700px){
@@ -426,44 +426,6 @@ html {
         width: 100%;
       };
     }
-    // > div {
-    //   display: none;
-    //   text-align: right;
-    //   @include range-width(0, 700px){
-    //     text-align: center;
-    //     display: none;
-    //   }
-    //   span {
-    //     margin-top: 20px;
-    //     display: inline-block;
-    //     width: 100%;
-    //     color: rgba(121, 174, 224, 1.00);
-    //     font-size: 24px;
-    //     font-weight: bold;
-    //   }
-    //   > div {
-    //     margin-top: 10px;
-    //     display: inline-block;
-    //     @include clearfix();
-        
-    //     > a {
-    //       display: inline-block;
-    //       float: left;
-    //       font-size: 25px;
-    //       width: 30px;
-    //       text-decoration: none;
-    //       height: 30px;
-    //       line-height: 30px;
-    //       text-align: center;
-    //       color: rgba(2, 39, 81, 1.00);
-    //       @include transition(color .3s);
-          
-    //       &:hover {
-    //         color: rgba(79, 148, 215, 1.00);
-    //       }
-    //     }
-    //   }
-    // }
   }
 }
 

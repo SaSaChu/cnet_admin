@@ -29,6 +29,36 @@
     </div>
 
     <div class='row n2'>
+      <label>* 封面 1</label>
+      <div class='img_row'>
+        <div class='drop_img no_cchoice'>
+          <img src='<?php echo $obj->cover1->url ();?>' />
+          <input type='file' name='cover1' />
+        </div>
+      </div>
+    </div>
+
+    <div class='row n2'>
+      <label>* 封面 2</label>
+      <div class='img_row'>
+        <div class='drop_img no_cchoice'>
+          <img src='<?php echo $obj->cover2->url ();?>' />
+          <input type='file' name='cover2' />
+        </div>
+      </div>
+    </div>
+
+    <div class='row n2'>
+      <label>* 封面 3</label>
+      <div class='img_row'>
+        <div class='drop_img no_cchoice'>
+          <img src='<?php echo $obj->cover3->url ();?>' />
+          <input type='file' name='cover3' />
+        </div>
+      </div>
+    </div>
+
+    <div class='row n2'>
       <label>* 標題</label>
       <div>
         <input type='text' name='title' value='<?php echo isset ($posts['title']) ? $posts['title'] : $obj->title;?>' placeholder='請輸入標題..' maxlength='200' pattern='.{1,200}' required title='輸入標題!' autofocus />

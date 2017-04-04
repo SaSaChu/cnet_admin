@@ -15,8 +15,7 @@ class Product extends OaModel {
   static $has_many = array (
     array ('features', 'class_name' => 'ProductFeature', 'order' => 'id DESC'),
     array ('sources', 'class_name' => 'ProductSource', 'order' => 'id DESC'),
-    array ('downloads', 'class_name' => 'ProductDownload', 'order' => 'id DESC'),
-    array ('images', 'class_name' => 'ProductImage', 'order' => 'id DESC')
+    array ('downloads', 'class_name' => 'ProductDownload', 'order' => 'id DESC')
   );
 
   static $belongs_to = array (
@@ -25,6 +24,10 @@ class Product extends OaModel {
 
   public function __construct ($attributes = array (), $guard_attributes = true, $instantiating_via_find = false, $new_record = true) {
     parent::__construct ($attributes, $guard_attributes, $instantiating_via_find, $new_record);
+
+    OrmFileUploader::bind ('cover1', 'ProductCover1FileUploader');
+    OrmFileUploader::bind ('cover2', 'ProductCover2FileUploader');
+    OrmFileUploader::bind ('cover3', 'ProductCover3FileUploader');
   }
   public function destroy () {
     if ($this->features)
@@ -40,11 +43,6 @@ class Product extends OaModel {
     if ($this->downloads)
       foreach ($this->downloads as $download)
         if (!$download->destroy ())
-          return false;
-        
-    if ($this->images)
-      foreach ($this->images as $image)
-        if (!$image->destroy ())
           return false;
 
     return $this->delete ();

@@ -27,14 +27,14 @@
       <label>* 封面</label>
       <div class='img_row'>
         <div class='drop_img no_cchoice'>
-          <img src='<?php echo $obj->cover->url ();?>' />
+          <img src='<?php echo $obj->cover->url ('1140x380c');?>' />
           <input type='file' name='cover' />
         </div>
       </div>
     </div>
 
     <div class='row n2'>
-      <label>* 鏈結</label>
+      <label>鏈結</label>
       <div>
         <input type='text' name='link' value='<?php echo isset ($posts['link']) ? $posts['link'] : $obj->link;?>' placeholder='請輸入鏈結..' maxlength='200' pattern='.{1,200}' required title='輸入鏈結!' autofocus />
       </div>

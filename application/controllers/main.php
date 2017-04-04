@@ -26,7 +26,7 @@ class Main extends Site_controller {
 
     $limit = 20;
     $total = Product::count (array ('conditions' => $conditions));
-    $products = Product::find ('all', array ('offset' => $offset < $total ? $offset : 0, 'limit' => $limit, 'order' => 'id DESC', 'include' => array ('images'), 'conditions' => $conditions));
+    $products = Product::find ('all', array ('offset' => $offset < $total ? $offset : 0, 'limit' => $limit, 'order' => 'id DESC', 'conditions' => $conditions));
 
     return $this->load_view (array (
         'now' => 'search',
@@ -43,13 +43,9 @@ class Main extends Site_controller {
       ));
   }
   public function index () {
-    $products = array_filter (Product::find ('all', array ('select' => 'id, title', 'include' => array ('images'), 'conditions' => array ('lang_id = ?', Lang::current ()->id))), function ($product) {
-      return $product->images;
-    });
-
     return $this->load_view (array (
         'now' => 'index',
-        'products' => array_slice ($products, 0, 4),
+        'products' => Product::find ('all', array ('select' => 'id, cover1, cover2, cover3, title', 'limit' => 4, 'order' => 'id DESC', 'conditions' => array ('lang_id = ?', Lang::current ()->id))),
       ));
   }
 }

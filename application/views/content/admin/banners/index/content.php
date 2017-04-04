@@ -56,8 +56,8 @@
             <tr>
               <td class='center'><?php echo $obj->id;?></td>
               <td class='center'>
-                <figure class='_i' href='<?php echo $obj->cover->url ('100x100c');?>'>
-                  <img src='<?php echo $obj->cover->url ('100x100c');?>' />
+                <figure class='_i' href='<?php echo $obj->cover->url ('1140x380c');?>'>
+                  <img src='<?php echo $obj->cover->url ('1140x380c');?>' />
                   <figcaption data-description=''></figcaption>
                 </figure>
               </td>

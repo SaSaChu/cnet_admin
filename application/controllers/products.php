@@ -32,7 +32,7 @@ class Products extends Site_controller {
 
     $limit = 12;
     $total = Product::count (array ('conditions' => $conditions));
-    $products = Product::find ('all', array ('offset' => $offset < $total ? $offset : 0, 'limit' => $limit, 'order' => 'id DESC', 'include' => array ('images'), 'conditions' => $conditions));
+    $products = Product::find ('all', array ('offset' => $offset < $total ? $offset : 0, 'limit' => $limit, 'order' => 'id DESC', 'conditions' => $conditions));
 
     return $this->load_view (array (
         'now' => 'product',

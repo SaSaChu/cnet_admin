@@ -44,9 +44,11 @@
       <thead>
         <tr>
           <th width='50' class='center'>#</th>
+          <th width='70' class='center'>封面 1</th>
+          <th width='70' class='center'>封面 2</th>
+          <th width='70' class='center'>封面 3</th>
           <th width='200'>標題</th>
-          <th>內容</th>
-          <th width='50'>圖片</th>
+          <th >內容</th>
           <th width='50'>功能</th>
           <th width='50'>特點</th>
           <th width='50'>下載</th>
@@ -59,11 +61,26 @@
           foreach ($objs as $obj) { ?>
             <tr>
               <td class='center'><?php echo $obj->id;?></td>
+              <td class='center'>
+                <figure class='_i' href='<?php echo $obj->cover1->url ('500x500c');?>'>
+                  <img src='<?php echo $obj->cover1->url ('500x500c');?>' />
+                  <figcaption data-description='<?php echo $obj->mini_content ();?>'><?php echo $obj->title;?></figcaption>
+                </figure>
+              </td>
+              <td class='center'>
+                <figure class='_i' href='<?php echo $obj->cover2->url ('500x500c');?>'>
+                  <img src='<?php echo $obj->cover2->url ('500x500c');?>' />
+                  <figcaption data-description='<?php echo $obj->mini_content ();?>'><?php echo $obj->title;?></figcaption>
+                </figure>
+              </td>
+              <td class='center'>
+                <figure class='_i' href='<?php echo $obj->cover3->url ('500x500c');?>'>
+                  <img src='<?php echo $obj->cover3->url ('500x500c');?>' />
+                  <figcaption data-description='<?php echo $obj->mini_content ();?>'><?php echo $obj->title;?></figcaption>
+                </figure>
+              </td>
               <td><?php echo $obj->mini_title (25);?></td>
               <td><?php echo $obj->mini_content (50);?></td>
-              <td>
-                <a class='icon-i' href="<?php echo base_url ('admin', 'product', $obj->id, 'images');?>"></a>
-              </td>
               <td>
                 <a class='icon-i' href="<?php echo base_url ('admin', 'product', $obj->id, 'features');?>"></a>
               </td>
@@ -83,7 +100,7 @@
     <?php }
         } else { ?>
           <tr>
-            <td colspan='8' class='no_data'>沒有任何資料。</td>
+            <td colspan='11' class='no_data'>沒有任何資料。</td>
           </tr>
   <?php } ?>
       </tbody>

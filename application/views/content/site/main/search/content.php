@@ -1,6 +1,6 @@
 <nav id='nav'>
   <div class='container'>
-    <h1>Kurumsal</h1>
+    <h1><?php echo Lang::get ('search', 'title');?>：「<?php echo $q;?>」</h1>
   </div>
 </nav>
 
@@ -9,9 +9,7 @@
 <?php
     foreach ($products as $product) { ?>
       <a href='<?php echo base_url ('product', $product->id);?>' class='product'>
-  <?php if ($product->images) { ?>
-          <img src='<?php echo $product->images[0]->name->url ('500x500c');?>'>
-  <?php } ?>
+        <img src='<?php echo $product->cover1->url ('500x500c');?>'>
         <h3><?php echo $product->title;?></h3>
       </a>
 <?php

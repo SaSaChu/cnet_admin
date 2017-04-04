@@ -5,12 +5,12 @@
  * @copyright   Copyright (c) 2016 OA Wu Design
  */
 
-class BlogCoverImageUploader extends OrmImageUploader {
+class ProductCover1FileUploader extends OrmImageUploader {
 
   public function getVersions () {
     return array (
         '' => array (),
-        '400x400c' => array ('adaptiveResizeQuadrant', 400, 400, 'c')
+        '500x500c' => array ('adaptiveResizeQuadrant', 500, 500, 'c')
       );
   }
 }

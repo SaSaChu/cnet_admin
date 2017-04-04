@@ -35,7 +35,7 @@
     <div class='items'>
 <?php foreach ($products as $product) { ?>
         <a href="">
-          <img src='<?php echo $product->images[0]->name->url ('500x500c');?>'>
+          <img src='<?php echo $product->cover1->url ('500x500c');?>'>
           <span><?php echo $product->title;?></span>
         </a>
 <?php } ?>
