@@ -87,7 +87,7 @@
         </a>
 <?php } ?>
 
-      <a href="<?php echo base_url ('news_list');?>"><?php echo Lang::get ('index', 'see_more');?></a>
+      <a href="<?php echo base_url ('news-list');?>"><?php echo Lang::get ('index', 'see_more');?></a>
     </div>
     <div>
       <h3><?php echo Lang::get ('index', 'cnet_turkey');?></h3>

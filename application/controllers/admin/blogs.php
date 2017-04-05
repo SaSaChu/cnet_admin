@@ -14,7 +14,7 @@ class Blogs extends Admin_controller {
   public function __construct () {
     parent::__construct ();
     
-    $this->uri_1 = 'admin/blogs';
+    $this->uri_1 = 'admin/news-list';
 
     if (in_array ($this->uri->rsegments (2, 0), array ('edit', 'update', 'destroy')))
       if (!(($id = $this->uri->rsegments (3, 0)) && ($this->obj = Blog::find ('one', array ('conditions' => array ('id = ?', $id))))))

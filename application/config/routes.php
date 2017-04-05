@@ -15,11 +15,12 @@ Route::get ('/search/(:num)', 'main@search($1)');
 Route::get ('/lang', 'main@lang(0)');
 Route::get ('/lang/(:any)', 'main@lang($1)');
 
-Route::get ('/blog/(:num)', 'blogs@show($1)');
+Route::get ('/news/(:num)', 'blogs@show($1)');
 Route::get ('/products/(:num)/(:num)', 'products@index($1, $2)');
 Route::get ('/product/(:num)', 'products@show($1)');
 
-Route::resourcePagination (array ('blogs'), 'blogs');
+Route::resourcePagination (array ('news-list'), 'blogs');
+Route::resourcePagination (array ('news_list'), 'blogs');
 Route::resourcePagination (array ('products'), 'products');
 
 Route::get ('/platform', 'platform@login');
@@ -29,7 +30,8 @@ Route::group ('admin', function () {
 
   Route::resourcePagination (array ('menus'), 'menus');
   Route::resourcePagination (array ('menu', 'menus'), 'menu_menus');
-  Route::resourcePagination (array ('blogs'), 'blogs');
+  Route::resourcePagination (array ('news-list'), 'blogs');
+  Route::resourcePagination (array ('news_list'), 'blogs');
   Route::resourcePagination (array ('banners'), 'banners');
 
   Route::resourcePagination (array ('products'), 'products');
