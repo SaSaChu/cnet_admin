@@ -45,7 +45,7 @@
         <tr>
           <th width='80'>#</th>
           <th >名稱</th>
-          <th width='200'>另開鏈結</th>
+          <th width='200'>鏈結</th>
           <th width='110'>語言包代碼</th>
           <th width='85' class='right'>修改/刪除</th>
         </tr>
