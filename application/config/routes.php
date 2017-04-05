@@ -9,6 +9,7 @@ Route::get ('/logout', 'platform@logout');
 Route::get ('/platform/index', 'platform@login');
 
 Route::get ('/about', 'main@about');
+Route::get ('/support', 'main@support');
 Route::get ('/search', 'main@search');
 Route::get ('/search/(:num)', 'main@search($1)');
 

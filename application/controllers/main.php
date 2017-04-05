@@ -42,6 +42,11 @@ class Main extends Site_controller {
         'now' => 'about'
       ));
   }
+  public function support () {
+    return $this->load_view (array (
+        'now' => 'support'
+      ));
+  }
   public function index () {
     return $this->load_view (array (
         'now' => 'index',

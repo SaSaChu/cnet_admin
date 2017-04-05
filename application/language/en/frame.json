@@ -45,34 +45,6 @@
       {
         "name": "CNet MENU",
         "subs": {
-          "home_page": {
-            "text": "Home page",
-            "href": ""
-          },
-          "products": {
-            "text": "Products",
-            "href": ""
-          },
-          "our_partners": {
-            "text": "Our partners",
-            "href": ""
-          },
-          "news": {
-            "text": "Blog",
-            "href": ""
-          },
-          "corporate": {
-            "text": "Corporate",
-            "href": ""
-          },
-          "support": {
-            "text": "Support",
-            "href": ""
-          },
-          "contact": {
-            "text": "Contact",
-            "href": ""
-          }
         }
       },
       {

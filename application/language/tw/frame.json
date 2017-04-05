@@ -44,36 +44,7 @@
       },
       {
         "name": "CNet選單",
-        "subs": {
-          "home_page": {
-            "text": "首頁",
-            "href": ""
-          },
-          "products": {
-            "text": "製品",
-            "href": ""
-          },
-          "our_partners": {
-            "text": "我們的合作夥伴",
-            "href": ""
-          },
-          "news": {
-            "text": "博客",
-            "href": ""
-          },
-          "corporate": {
-            "text": "制度",
-            "href": ""
-          },
-          "support": {
-            "text": "支持",
-            "href": ""
-          },
-          "contact": {
-            "text": "聯繫",
-            "href": ""
-          }
-        }
+        "subs": {}
       },
       {
         "name": "聯繫我們",

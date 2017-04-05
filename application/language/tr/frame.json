@@ -45,34 +45,6 @@
       {
         "name": "HlZLI MENÜ",
         "subs": {
-          "home_page": {
-            "text": "Anasayfa",
-            "href": ""
-          },
-          "products": {
-            "text": "Ürünler",
-            "href": ""
-          },
-          "our_partners": {
-            "text": "Partnerlerimiz",
-            "href": ""
-          },
-          "news": {
-            "text": "Blog",
-            "href": ""
-          },
-          "corporate": {
-            "text": "Kurumsal",
-            "href": ""
-          },
-          "support": {
-            "text": "Destek",
-            "href": ""
-          },
-          "contact": {
-            "text": "İletişim",
-            "href": ""
-          }
         }
       },
       {
