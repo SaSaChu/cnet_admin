@@ -7,7 +7,7 @@
           <h1><?php echo $blog->title;?></h1>
           <time>@ <?php echo $blog->created_at->format ('m.d.Y H:i');?></time>
         </div>
-        <a href="<?php echo base_url ('blogs');?>"><?php echo Lang::get ('news', 'back');?></a>
+        <a href="<?php echo base_url ('news_list');?>"><?php echo Lang::get ('news', 'back');?></a>
       </header>
 
       <div>

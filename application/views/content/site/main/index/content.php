@@ -55,13 +55,13 @@
         <div>
           <h3><?php echo Lang::get ('index', 'cnet_news');?></h3>
     <?php foreach ($blogs as $blog) { ?>
-            <a href="<?php echo base_url ('blog', $blog->id);?>">
+            <a href="<?php echo base_url ('news', $blog->id);?>">
               <h4><?php echo $blog->title;?></h4>
               <p><?php echo $blog->mini_content ();?></p>
             </a>
     <?php } ?>
 
-          <a href="<?php echo base_url ('blogs');?>"><?php echo Lang::get ('index', 'see_more');?></a>
+          <a href="<?php echo base_url ('news_list');?>"><?php echo Lang::get ('index', 'see_more');?></a>
         </div>
         <div>
           <h3><?php echo Lang::get ('index', 'cnet_turkey');?></h3>

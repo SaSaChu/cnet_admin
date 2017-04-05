@@ -43,7 +43,7 @@
           <div>
             <a<?php echo isset ($now) && $now && $now == 'index' ? ' class="active"' : '';?> href='<?php echo base_url ();?>'><?php echo Lang::get ('frame', 'pages', 'index');?></a>
             <a<?php echo isset ($now) && $now && $now == 'about' ? ' class="active"' : '';?> href='<?php echo base_url ('about');?>'><?php echo Lang::get ('frame', 'pages', 'about');?></a>
-            <a<?php echo isset ($now) && $now && $now == 'news' ? ' class="active"' : '';?> href='<?php echo base_url ('blogs');?>'><?php echo Lang::get ('frame', 'pages', 'news');?></a>
+            <a<?php echo isset ($now) && $now && $now == 'news' ? ' class="active"' : '';?> href='<?php echo base_url ('news_list');?>'><?php echo Lang::get ('frame', 'pages', 'news');?></a>
             <a<?php echo isset ($now) && $now && $now == 'support' ? ' class="active"' : '';?> href='<?php echo base_url ();?>'><?php echo Lang::get ('frame', 'pages', 'support');?></a>
             <a<?php echo isset ($now) && $now && $now == 'product' ? ' class="active"' : '';?> href='<?php echo base_url ('products');?>'><?php echo Lang::get ('frame', 'pages', 'product');?></a>
             <a<?php echo isset ($now) && $now && $now == 'partner' ? ' class="active"' : '';?> href='<?php echo base_url ('partners');?>'><?php echo Lang::get ('frame', 'pages', 'partner');?></a>
@@ -72,7 +72,7 @@
           <a<?php echo Lang::get ('frame', 'about', '1', 'subs', 'home_page', 'href') ? " href='" . Lang::get ('frame', 'about', '1', 'subs', 'home_page', 'href') . "'" : '';?>><?php echo Lang::get ('frame', 'about', '1', 'subs', 'home_page', 'text');?></a>
           <a<?php echo Lang::get ('frame', 'about', '1', 'subs', 'products', 'href') ? " href='" . Lang::get ('frame', 'about', '1', 'subs', 'products', 'href') . "'" : '';?>><?php echo Lang::get ('frame', 'about', '1', 'subs', 'products', 'text');?></a>
           <a<?php echo Lang::get ('frame', 'about', '1', 'subs', 'our_partners', 'href') ? " href='" . Lang::get ('frame', 'about', '1', 'subs', 'our_partners', 'href') . "'" : '';?>><?php echo Lang::get ('frame', 'about', '1', 'subs', 'our_partners', 'text');?></a>
-          <a<?php echo Lang::get ('frame', 'about', '1', 'subs', 'blog', 'href') ? " href='" . Lang::get ('frame', 'about', '1', 'subs', 'blog', 'href') . "'" : '';?>><?php echo Lang::get ('frame', 'about', '1', 'subs', 'blog', 'text');?></a>
+          <a<?php echo Lang::get ('frame', 'about', '1', 'subs', 'news', 'href') ? " href='" . Lang::get ('frame', 'about', '1', 'subs', 'news', 'href') . "'" : '';?>><?php echo Lang::get ('frame', 'about', '1', 'subs', 'blog', 'text');?></a>
           <a<?php echo Lang::get ('frame', 'about', '1', 'subs', 'corporate', 'href') ? " href='" . Lang::get ('frame', 'about', '1', 'subs', 'corporate', 'href') . "'" : '';?>><?php echo Lang::get ('frame', 'about', '1', 'subs', 'corporate', 'text');?></a>
           <a<?php echo Lang::get ('frame', 'about', '1', 'subs', 'support', 'href') ? " href='" . Lang::get ('frame', 'about', '1', 'subs', 'support', 'href') . "'" : '';?>><?php echo Lang::get ('frame', 'about', '1', 'subs', 'support', 'text');?></a>
           <a<?php echo Lang::get ('frame', 'about', '1', 'subs', 'contact', 'href') ? " href='" . Lang::get ('frame', 'about', '1', 'subs', 'contact', 'href') . "'" : '';?>><?php echo Lang::get ('frame', 'about', '1', 'subs', 'contact', 'text');?></a>

@@ -10,7 +10,7 @@
       
       <div class='items'>
   <?php foreach ($blogs as $blog) { ?>
-          <a href='<?php echo base_url ('blog', $blog->id);?>'>
+          <a href='<?php echo base_url ('news', $blog->id);?>'>
             <h3><?php echo $blog->title;?></h3>
             <span><?php echo $blog->mini_content (200);?></span>
           </a>
@@ -30,7 +30,7 @@
             <img src='<?php echo $blog->cover->url ('400x400c');?>' />
             <h3><?php echo $blog->title;?></h3>
             <p><?php echo $blog->mini_content (250);?></p>
-            <a href="<?php echo base_url ('blog', $blog->id);?>"><?php echo Lang::get ('news', 'see_more');?></a>
+            <a href="<?php echo base_url ('news', $blog->id);?>"><?php echo Lang::get ('news', 'see_more');?></a>
           </div>
   <?php } ?>
       </div>
