@@ -11,7 +11,7 @@ class Platform extends Site_controller {
     parent::__construct ();
   }
   public function login () {
-    if (User::current () && User::current ()->is_login ()) return redirect_message (array ('admin'), array ());
+    if (User::current ()) return redirect_message (array ('admin'), array ());
     else $this->set_frame_path ('frame', 'pure')->set_content_path ('content', 'site')->load_view ();
   }
   public function ap_sign_in () {
