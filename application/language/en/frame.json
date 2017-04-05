@@ -3,7 +3,7 @@
   "pages":{
     "index": "Home Page",
     "about": "About CNet",
-    "news": "Cnet News",
+    "news": "CNet News",
     "support": "Support",
     "product": "Products",
     "partner": "Our partners"
@@ -43,7 +43,7 @@
         }
       },
       {
-        "name": "Cnet MENU",
+        "name": "CNet MENU",
         "subs": {
           "home_page": {
             "text": "Home page",
