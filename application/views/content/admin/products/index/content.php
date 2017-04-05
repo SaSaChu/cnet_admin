@@ -1,6 +1,6 @@
 <header>
   <div class='title'>
-    <h1>產品</h1>
+    <h1>產品選單</h1>
     <p>列表</p>
   </div>
 
@@ -33,7 +33,7 @@
 
 <div class='panel'>
   <header>
-    <h2>產品列表</h2>
+    <h2>產品選單列表</h2>
     <a href='<?php echo base_url ($uri_1, 'add');?>' class='icon-r'></a>
   </header>
 

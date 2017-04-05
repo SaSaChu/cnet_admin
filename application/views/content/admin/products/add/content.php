@@ -1,6 +1,6 @@
 <div class='panel'>
   <header>
-    <h2>新增產品</h2>
+    <h2>新增產品選單</h2>
     <a href='<?php echo base_url ($uri_1);?>' class='icon-x'></a>
   </header>
 
