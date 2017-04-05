@@ -23,9 +23,9 @@
           <button typ='submit' class='icon-search'></button>
         </form>
         <span class='lang'>
-          <select id='lang_select' data-url='<?php echo base_url ('lang');?>'>
-      <?php foreach (Lang::all (array ('select' => 'id, name')) as $lang) { ?>
-              <option value='<?php echo $lang->id;?>'<?php echo Lang::current ()->id == $lang->id ? ' selected' : '';?>><?php echo $lang->name;?></option>
+          <select id='lang_select' data-links='<?php echo json_encode ($links = array_combine (column_array ($links = array_map (function ($link) { return $link->to_array (); }, Lang::all (array ('select' => 'id, name, link, code'))), 'id'), $links));?>' data-url='<?php echo base_url ('lang');?>'>
+      <?php foreach ($links as $code => $lang) { ?>
+              <option value='<?php echo $code;?>' <?php echo Lang::current ()->id == $code ? ' selected' : '';?>><?php echo $lang['name'];?></option>
       <?php } ?>
           </select>
           <label class='icon-keyboard_arrow_down'></label>

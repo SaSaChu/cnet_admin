@@ -5,6 +5,9 @@
 
 $(function () {
   $('#lang_select').change (function () {
-    window.location.replace ($(this).data ('url') + '/' + $(this).val ());
+    if ($(this).data ('links')[$(this).val ()].link.length)
+      window.location.assign ($(this).data ('links')[$(this).val ()].link.length);
+    else
+      window.location.replace ($(this).data ('url') + '/' + $(this).val ());
   });
 });
