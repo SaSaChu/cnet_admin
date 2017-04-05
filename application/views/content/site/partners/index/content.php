@@ -50,7 +50,6 @@
           <img src="<?php echo base_url ('resource', 'image', 'parnter', '3.png');?>">
           <span>Yüksel Elektroteknik San. Tic. Ltd. Şti.</span>
         </div>
-        <div>
       </div>
 
     </div>
