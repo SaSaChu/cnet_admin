@@ -45,6 +45,7 @@
         <tr>
           <th width='80'>#</th>
           <th >名稱</th>
+          <th width='200'>另開鏈結</th>
           <th width='110'>語言包代碼</th>
           <th width='85' class='right'>修改/刪除</th>
         </tr>
@@ -56,6 +57,7 @@
               <td><?php echo $obj->id;?></td>
               <td><?php echo $obj->name;?></td>
               <td><?php echo $obj->code;?></td>
+              <td><?php echo make_click_able_links ($obj->link);?></td>
               <td class='right'>
                 <a class='icon-e' href="<?php echo base_url ($uri_1, $obj->id, 'edit');?>"></a>
                 /
@@ -65,7 +67,7 @@
     <?php }
         } else { ?>
           <tr>
-            <td colspan='3' class='no_data'>沒有任何資料。</td>
+            <td colspan='4' class='no_data'>沒有任何資料。</td>
           </tr>
   <?php } ?>
       </tbody>
