@@ -12,6 +12,7 @@ class Migration_Add_langs extends CI_Migration {
         `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
         `name` varchar(255) COLLATE utf8_unicode_ci NOT NULL DEFAULT '' COMMENT '名稱',
         `code` varchar(50) COLLATE utf8_unicode_ci NOT NULL DEFAULT '' COMMENT '代碼',
+        `link` varchar(2083) COLLATE utf8_unicode_ci NOT NULL DEFAULT '' COMMENT '鏈結',
 
         `updated_at` datetime NOT NULL DEFAULT '2017-04-04 20:41:26' COMMENT '更新時間',
         `created_at` datetime NOT NULL DEFAULT '2017-04-04 20:41:26' COMMENT '新增時間',

@@ -99,8 +99,10 @@ class Langs extends Admin_controller {
     if (!isset ($posts['name'])) return '沒有填寫 名稱！';
     if (!(is_string ($posts['name']) && ($posts['name'] = trim ($posts['name'])))) return '名稱 格式錯誤！';
     
-    if (!isset ($posts['code'])) return '沒有填寫 代碼！';
-    if (!(is_string ($posts['code']) && ($posts['code'] = trim ($posts['code'])))) return '代碼 格式錯誤！';
+    if (!isset ($posts['code'])) $posts['code'] = '';
+    if (!isset ($posts['link'])) $posts['link'] = '';
+
+    if (!$posts['code'] && !$posts['link']) return '語言包代碼或者鏈結請至少填一個！';
     return '';
   }
   private function _validation_update (&$posts) {

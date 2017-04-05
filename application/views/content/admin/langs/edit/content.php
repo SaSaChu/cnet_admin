@@ -15,9 +15,15 @@
       </div>
     </div>
     <div class='row n2'>
-      <label>* 代碼</label>
+      <label>語言包代碼</label>
       <div>
-        <input type='text' name='code' value='<?php echo isset ($posts['code']) ? $posts['code'] : $obj->code;?>' placeholder='請輸入代碼..' maxlength='200' pattern='.{1,200}' required title='輸入代碼!' />
+        <input type='text' name='code' value='<?php echo isset ($posts['code']) ? $posts['code'] : $obj->code;?>' placeholder='請輸入代碼..' maxlength='50' />
+      </div>
+    </div>
+    <div class='row n2'>
+      <label>另開鏈結</label>
+      <div>
+        <input type='text' name='link' value='<?php echo isset ($posts['link']) ? $posts['link'] : $obj->link;?>' placeholder='請輸入另開鏈結..' maxlength='2083' />
       </div>
     </div>
 
