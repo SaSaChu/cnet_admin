@@ -7,6 +7,7 @@
     <?php foreach ($banners as $banner) { ?>
             <a href='<?php echo $banner->link;?>'>
               <img src='<?php echo $banner->cover->url ('1140x380c');?>'>
+              <img src='<?php echo $banner->cover2->url ('500x500c');?>'>
             </a>
     <?php } ?>
         </div>

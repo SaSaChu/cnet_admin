@@ -8,22 +8,31 @@
 $mc: 15;
 
 #banner {
-  height: 380px;
-  background-color: rgba(33, 89, 153, 1.00);
-  @include range-width(0, 480px){
-    height: 100px + 30px;
+  padding-top: 16px;
+  height: 380px + 16px;
+  @include range-width(780px) {
+    background-color: rgba(33, 89, 153, 1.00);
+  }
+  // @include range-width(0, 480px){
+  //   height: 100px + 30px + 16px;
+  // };
+  @include range-width(0, 330px) {
+    height: 250px + 16px;
   };
-  @include range-width(480px, 630px){
-    height: 150px + 30px;
+  @include range-width(330px, 440px) {
+    height: 300px + 16px;
   };
-  @include range-width(630px, 780px){
-    height: 200px + 30px;
+  @include range-width(440px, 550px) {
+    height: 400px + 16px;
+  };
+  @include range-width(550px, 780px) {
+    height: 500px + 16px;
   };
   @include range-width(780px, 930px){
-    height: 250px;
+    height: 250px + 16px;
   };
   @include range-width(930px, 1180px){
-    height: 300px;
+    height: 300px + 16px;
   };
 
   .container {
@@ -35,6 +44,9 @@ $mc: 15;
       top: 24px;
       display: inline-block;
       width: 15px;
+      @include range-width(0, 780px) {
+        display: none;
+      };
       > a {
         display: block;
         width: 10px;
@@ -90,6 +102,18 @@ $mc: 15;
         
         img {
           max-height: 100%;
+          &:first-child {
+            display: inline-block;
+            @include range-width(0, 780px) {
+              display: none;
+            }
+          }
+          &:last-child {
+            display: none;
+            @include range-width(0, 780px) {
+              display: inline-block;
+            }
+          }
         }
 
         @for $i from 1 through $mc {
