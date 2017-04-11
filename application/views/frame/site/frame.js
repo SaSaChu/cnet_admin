@@ -6,7 +6,7 @@
 $(function () {
   $('#lang_select').change (function () {
     if ($(this).data ('links')[$(this).val ()].link.length)
-      window.location.assign ($(this).data ('links')[$(this).val ()].link.length);
+      window.location.assign ($(this).data ('links')[$(this).val ()].link);
     else
       window.location.replace ($(this).data ('url') + '/' + $(this).val ());
   });
