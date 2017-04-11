@@ -344,21 +344,32 @@ html {
       color: white;
       width: calc(100% / 3);
       @include range-width(0, 750px){
-        width: 100%;        
-      };
-      
+        width: 100%;   
+        &:not(:first-child) {
+          margin-top: 24px;
+        }
+      }
       > * {
         display: inline-block;
         width: 100%;
         text-align: left;
+        @include range-width(0, 750px){
+          text-align: center;
+        }
       }
       h3 {
-        font-size: 20px;
+        font-size: 14.4px;
+        font-weight: 600;
         margin: 10px 0;
       }
       a {
         text-decoration: none;
         color: white;
+        font-size: 13.3px;
+        font-weight: 100;
+        font-family: "Open Sans", sans-serif;
+        margin-top: 5px;
+        @include font-smoothing(auto);
       }
     }
   }
@@ -381,14 +392,13 @@ html {
       &:last-child {
         display: inline-block;
         margin-top: 16px;
-        @include clearfix();
         
         > img {
-          float: left;
-          height: 20px;
+          display: block;
+          width: 80px;
 
           + img {
-            margin-left: 20px;
+            margin-top: 20px;
           }
         }
       }
