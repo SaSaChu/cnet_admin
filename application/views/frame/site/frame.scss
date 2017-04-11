@@ -94,12 +94,14 @@ html {
       float: left;
       background-color: rga(255, 0, 0, 0.2);
     }
-    div {
+    b {
       width: 200px;
       text-align: left;
       color: rgba(113, 137, 160, 1.00);
       font-size: 15px;
       font-weight: bold;
+      font-family: "Open Sans", sans-serif;
+      @include font-smoothing(auto);
       @include range-width(0, 600px){
         display: none;
       }

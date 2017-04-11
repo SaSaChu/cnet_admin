@@ -10,6 +10,8 @@
 <?php echo isset ($css_list) ? $css_list : ''; ?>
 
 <?php echo isset ($js_list) ? $js_list : ''; ?>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400&amp;subset=latin,cyrillic-ext,greek,greek-ext,vietnamese,latin-ext,cyrillic" rel="stylesheet" type="text/css" />
+
 
   </head>
   <body lang="zh-tw">
@@ -17,7 +19,7 @@
 
     <div id='top'>
       <div class='container'>
-        <div>+90 216 592 98 00</div>
+        <b>+90 216 592 98 00</b>
         <form action='<?php echo base_url ('search');?>' method='get'>
           <input type='search' name='q' placeholder='<?php echo Lang::get ('frame', 'search_input');?>...' value='<?php echo isset ($q) && $q ? $q : '';?>' />
           <button typ='submit' class='icon-search'></button>
