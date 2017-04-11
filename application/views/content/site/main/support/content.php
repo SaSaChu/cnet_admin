@@ -8,18 +8,25 @@
   <div class='container'>
     <div class='left'>
       <div class='items' style='height: 150px;'>
+        <p><?php echo Lang::get ('support', 'item');?></p>
       </div>
       <img src='<?php echo base_url ('resource', 'image', 'cnetflag.png');?>'>
     </div>
     <div class='right'>
-<?php foreach (Lang::get ('support', 'details') as $detail) { ?>
         <article class='active'>
-          <h2><?php echo $detail['title'];?></h2>
-    <?php foreach ($detail['contents'] as $content) { ?>
-            <p><?php echo $content;?></p>
-    <?php } ?>
+          <h2><?php echo Lang::get ('support', 'detail', 'title');?></h2>
+            
+          <div>
+            <p class='icon-phone'><?php echo Lang::get ('support', 'detail', 'tel');?></p>
+            <p class='icon-mail-envelope-closed'><?php echo Lang::get ('support', 'detail', 'email');?></p>
+            <p class='icon-pin-alt'><?php echo Lang::get ('support', 'detail', 'address');?></p>
+          </div>
+          <div>
+      <?php if (file_exists (FCPATH . implode (DIRECTORY_SEPARATOR, array ('resource', 'image', 'maps', Lang::current ()->code . '.png')))) { ?>
+              <img src='<?php echo base_url ('resource', 'image', 'maps', Lang::current ()->code . '.png');?>'>
+      <?php } ?>
+          </div>
         </article>
-<?php } ?>
     </div>
   </div>
 </div>

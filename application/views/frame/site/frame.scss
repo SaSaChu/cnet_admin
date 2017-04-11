@@ -12,14 +12,23 @@
 }
 
 
-.icon-download:before {
-  content: "\f019";
+.icon-pin-alt:before {
+  content: "\e903";
+}
+.icon-phone:before {
+  content: "\e942";
+}
+.icon-mail-envelope-closed:before {
+  content: "\e900";
 }
 .icon-keyboard_arrow_down:before {
-  content: "\e901";
+  content: "\e902";
 }
 .icon-menu:before {
-  content: "\e900";
+  content: "\e901";
+}
+.icon-keyboard_arrow_down:before {
+  content: "\e902";
 }
 .icon-forward:before {
   content: "\e969";
@@ -33,6 +42,10 @@
 .icon-arrow-down-right2:before {
   content: "\ea3d";
 }
+.icon-download:before {
+  content: "\f019";
+}
+
 
 
 

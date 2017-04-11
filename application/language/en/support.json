@@ -1,16 +1,10 @@
 {
   "title": "Customer Support",
-  "items": [],
-  "details": [
-    {
-      "title": "CNet Support",
-      "contents": [
-        "For any product related issue please contact us at below:",
-        "Address：7F.-1, No.738, Zhongzheng Rd., Zhonghe Dist.",
-        "New Taipei City 23511, Taiwan (R.O.C.)",
-        "Tel：+886-2-82280437",
-        "Email：support@myspotcam.com"
-      ]
-    }
-  ]
+  "item": "For any product related issue please contact us at below",
+  "detail": {
+    "title": "CNet Support",
+    "address": "7F.-1, No.738, Zhongzheng Rd.,<br/>Zhonghe Dist.New Taipei City 23511, Taiwan (R.O.C.)",
+    "tel": "+886-2-82280437",
+    "email": "support@myspotcam.com"
+  }
 }
