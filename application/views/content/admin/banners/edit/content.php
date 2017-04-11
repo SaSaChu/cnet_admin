@@ -36,7 +36,7 @@
       <label>* 小封面</label>
       <div class='img_row'>
         <div class='drop_img no_cchoice'>
-          <img src='<?php echo $obj->cover2->url ('1140x380c');?>' />
+          <img src='<?php echo $obj->cover2->url ('500x500c');?>' />
           <input type='file' name='cover2' />
         </div>
       </div>
