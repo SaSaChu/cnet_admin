@@ -13,6 +13,7 @@ class Migration_Add_banners extends CI_Migration {
         `lang_id` int(11) unsigned NOT NULL DEFAULT 0 COMMENT '語系 ID',
         
         `cover` varchar(50) COLLATE utf8_unicode_ci NOT NULL DEFAULT '' COMMENT '封面',
+        `cover2` varchar(50) COLLATE utf8_unicode_ci NOT NULL DEFAULT '' COMMENT '小封面',
         `link` text NOT NULL COMMENT '鏈結',
 
         `updated_at` datetime NOT NULL DEFAULT '2017-04-04 20:41:26' COMMENT '更新時間',

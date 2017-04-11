@@ -45,6 +45,7 @@
         <tr>
           <th width='50' class='center'>#</th>
           <th width='70' class='center'>封面</th>
+          <th width='70' class='center'>小封面</th>
           <th>鏈結</th>
           <th width='50'>語系</th>
           <th width='85' class='right'>修改/刪除</th>
@@ -61,6 +62,12 @@
                   <figcaption data-description=''></figcaption>
                 </figure>
               </td>
+              <td class='center'>
+                <figure class='_i' href='<?php echo $obj->cover2->url ('1140x380c');?>'>
+                  <img src='<?php echo $obj->cover2->url ('1140x380c');?>' />
+                  <figcaption data-description=''></figcaption>
+                </figure>
+              </td>
               <td><?php echo $obj->link;?></td>
               <td><?php echo $obj->lang ? $obj->lang->name : '';?></td>
               <td class='right'>
@@ -72,7 +79,7 @@
     <?php }
         } else { ?>
           <tr>
-            <td colspan='5' class='no_data'>沒有任何資料。</td>
+            <td colspan='6' class='no_data'>沒有任何資料。</td>
           </tr>
   <?php } ?>
       </tbody>

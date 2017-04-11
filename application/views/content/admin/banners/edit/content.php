@@ -32,6 +32,15 @@
         </div>
       </div>
     </div>
+    <div class='row n2'>
+      <label>* 小封面</label>
+      <div class='img_row'>
+        <div class='drop_img no_cchoice'>
+          <img src='<?php echo $obj->cover2->url ('1140x380c');?>' />
+          <input type='file' name='cover2' />
+        </div>
+      </div>
+    </div>
 
     <div class='row n2'>
       <label>鏈結</label>
