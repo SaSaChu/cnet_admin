@@ -23,7 +23,7 @@ class Banner extends OaModel {
     parent::__construct ($attributes, $guard_attributes, $instantiating_via_find, $new_record);
 
     OrmImageUploader::bind ('cover', 'BannerCoverImageUploader');
-    OrmImageUploader::bind ('cover', 'BannerCover2ImageUploader');
+    OrmImageUploader::bind ('cover2', 'BannerCover2ImageUploader');
   }
   public function destroy () {
     return $this->cover->cleanAllFiles () && $this->delete ();
