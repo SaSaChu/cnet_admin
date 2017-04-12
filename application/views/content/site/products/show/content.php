@@ -32,7 +32,7 @@
               <div>
                 <div><img src='<?php echo $feature->name->url ('100x100c');?>'></div>
                 <span><?php echo $feature->title;?></span>
-                <p><?php echo $feature->mini_content (40);?></p>
+                <p><?php echo $feature->mini_content (40 * 2);?></p>
               </div>
       <?php } ?>
         </section>
