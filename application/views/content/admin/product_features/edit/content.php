@@ -28,7 +28,7 @@
     <div class='row n2'>
       <label>內容</label>
       <div>
-        <textarea name='content' class='pure' placeholder='請輸入內容..'><?php echo isset ($posts['content']) ? $posts['content'] : $obj->content;?></textarea>
+        <textarea name='content' class='pure' placeholder='請輸入內容..' maxlength='40'><?php echo isset ($posts['content']) ? $posts['content'] : $obj->content;?></textarea>
       </div>
     </div>
 
