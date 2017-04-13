@@ -56,8 +56,8 @@
             <tr>
               <td><?php echo $obj->id;?></td>
               <td><?php echo $obj->name;?></td>
-              <td><?php echo $obj->code;?></td>
               <td><?php echo make_click_able_links ($obj->link);?></td>
+              <td><?php echo $obj->code;?></td>
               <td class='right'>
                 <a class='icon-e' href="<?php echo base_url ($uri_1, $obj->id, 'edit');?>"></a>
                 /
