@@ -37,7 +37,7 @@ class Menu extends OaModel {
                 );
             }, $menu->subs)
           );
-      }, Menu::all (array ('select' => 'id, name, lang_id, menu_id', 'include' => array ('subs'), 'conditions' => $useLang ? array ('menu_id = ? AND lang_id = ?', 0, Lang::current ()->id) : array ('menu_id = ?', 0))));
+      }, Menu::all (array ('select' => 'id, name, lang_id, menu_id', 'order' => 'sort ASC', 'include' => array ('subs'), 'conditions' => $useLang ? array ('menu_id = ? AND lang_id = ?', 0, Lang::current ()->id) : array ('menu_id = ?', 0))));
   }
   public function destroy () {
     if ($this->subs)
