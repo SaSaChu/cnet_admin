@@ -9,14 +9,15 @@ $(function () {
   var $menu_id = $('#menu_id');
 
   function x () {
-    $menu_id.empty ().append ($menu_id.data ('menus').filter (function (t) {
-        return t.lang == $lang_id.val ();
-      }).map (function (t) {
-          return $('<option />').attr ('class','main').val (t.id).text (t.name).prop ('selected', t.id == $menu_id.data ('d4')).add (
-            $(t.subs.map (function (u) {
-                return $('<option />').addClass ('sub').val (u.id).html ("&nbsp;&nbsp;-&nbsp;&nbsp;" + u.name).prop ('selected', u.id == $menu_id.data ('d4'));
-              })).get (0));
-      }));
+    $menu_id.empty ();
+
+    var xx = $menu_id.data ('menus').filter (function (t) { return t.lang == $lang_id.val (); });
+
+    for (var i = 0; i < xx.length; i++) {
+      $menu_id.append ($('<option />').val (xx[i].id).text (xx[i].name).prop ('selected', xx[i].id == $menu_id.data ('d4')));
+      for (var j = 0; j < xx[i].subs.length; j++)
+        $menu_id.append ($('<option />').addClass ('sub').val (xx[i].subs[j].id).html ("&nbsp;&nbsp;-&nbsp;&nbsp;" + xx[i].subs[j].name).prop ('selected', xx[i].subs[j].id == $menu_id.data ('d4')));
+    }
   }
   x ();
 });
