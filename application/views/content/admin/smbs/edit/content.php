@@ -1,0 +1,60 @@
+<div class='panel'>
+  <header>
+    <h2>修改 SMB 頁面資訊</h2>
+    <a href='<?php echo base_url ($uri_1);?>' class='icon-x'></a>
+  </header>
+
+
+  <form class='form full' method='post' action='<?php echo base_url ($uri_1, $obj->id);?>' enctype='multipart/form-data'>
+    <input type='hidden' name='_method' value='put' />
+
+    <div class='row n2'>
+      <label>* 底圖</label>
+      <div class='img_row'>
+        <div class='drop_img no_cchoice'>
+          <img src='<?php echo $obj->cover->url ();?>' />
+          <input type='file' name='cover' />
+        </div>
+      </div>
+    </div>
+
+    <div class='row n2'>
+      <label>* 標題1</label>
+      <div>
+        <input type='text' name='title1' value='<?php echo isset ($posts['title1']) ? $posts['title1'] : $obj->title1;?>' placeholder='請輸入標題1..' maxlength='200' pattern='.{1,200}' required title='輸入標題1!' autofocus />
+      </div>
+    </div>
+
+    <div class='row n2'>
+      <label>* 副標題1</label>
+      <div>
+        <input type='text' name='sub_title1' value='<?php echo isset ($posts['sub_title1']) ? $posts['sub_title1'] : $obj->sub_title1;?>' placeholder='請輸入副標題1..' maxlength='200' pattern='.{1,200}' required title='輸入副標題1!' />
+      </div>
+    </div>
+
+    <div class='row n2'>
+      <label>* 標題2</label>
+      <div>
+        <input type='text' name='title2' value='<?php echo isset ($posts['title2']) ? $posts['title2'] : $obj->title2;?>' placeholder='請輸入標題2..' maxlength='200' pattern='.{1,200}' required title='輸入標題2!' />
+      </div>
+    </div>
+
+    <div class='row n2'>
+      <label>* 副標題2</label>
+      <div>
+        <input type='text' name='sub_title2' value='<?php echo isset ($posts['sub_title2']) ? $posts['sub_title2'] : $obj->sub_title2;?>' placeholder='請輸入副標題2..' pattern='.{1,}' required title='輸入副標題2!' />
+      </div>
+    </div>
+
+
+    <div class='btns'>
+      <div class='row n2'>
+        <label></label>
+        <div>
+          <button type='reset'>取消</button>
+          <button type='submit'>送出</button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

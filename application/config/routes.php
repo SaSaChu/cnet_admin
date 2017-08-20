@@ -34,6 +34,8 @@ Route::group ('admin', function () {
   Route::resourcePagination (array ('news-list'), 'blogs');
   Route::resourcePagination (array ('news_list'), 'blogs');
   Route::resourcePagination (array ('banners'), 'banners');
+  Route::resourcePagination (array ('smbs'), 'smbs');
+  Route::resourcePagination (array ('solutions'), 'solutions');
 
   Route::resourcePagination (array ('products'), 'products');
   Route::resourcePagination (array ('product', 'features'), 'product_features');

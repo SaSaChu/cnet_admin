@@ -43,7 +43,15 @@
                   <li><a href="<?php echo $url = base_url ('admin', 'menus');?>" class='icon-se<?php echo $now_url == $url ? ' active' : '';?>'>產品選單</a></li>
                   <li><a href="<?php echo $url = base_url ('admin', 'news-list');?>" class='icon-se<?php echo $now_url == $url ? ' active' : '';?>'>最新消息</a></li>
                   <li><a href="<?php echo $url = base_url ('admin', 'banners');?>" class='icon-se<?php echo $now_url == $url ? ' active' : '';?>'>Banner 管理</a></li>
-                  <li><a href="<?php echo $url = base_url ('admin', 'products');?>" class='icon-se<?php echo $now_url == $url ? ' active' : '';?>'>產品管理</a></li>
+                  
+                </ul>
+              </label>
+              <label data-cnt='0'>
+                <input type='checkbox' />
+                <span class='icon-u'>SMB 區</span>
+                <ul>
+                  <li><a href="<?php echo $url = base_url ('admin', 'smbs');?>" class='icon-se<?php echo $now_url == $url ? ' active' : '';?>'>SMB 頁面資訊</a></li>
+                  <li><a href="<?php echo $url = base_url ('admin', 'solutions');?>" class='icon-se<?php echo $now_url == $url ? ' active' : '';?>'>SMB Solutions 管理</a></li>
                 </ul>
               </label>
             </li>

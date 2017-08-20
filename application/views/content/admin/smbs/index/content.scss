@@ -1,0 +1,26 @@
+/**
+ * @author      OA Wu <comdan66@gmail.com>
+ * @copyright   Copyright (c) 2016 OA Wu Design
+ * @link        http://www.ioa.tw/
+ */
+
+@import "_oa";
+
+.x {
+  &:empty {
+    height: 26px;
+    line-height: 26px;
+    &:before {
+      content: '無';
+      font-style: italic;
+      color: rgba(200, 200, 200, 1);
+    }
+  }
+}
+.x2 {
+  overflow: hidden;
+  cursor: pointer;
+  img {
+    max-height: 150px;
+  }
+}

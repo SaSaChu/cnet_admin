@@ -170,6 +170,7 @@ $(function () {
   });
 
   window.funs.initPhotoSwipeFromDOM ('.content table', 'figure._i');
+  window.funs.initPhotoSwipeFromDOM ('.row', '.x2');
 
   window.funs.updateFlag = function ($objs, callback) {
     $objs.each (function () {
