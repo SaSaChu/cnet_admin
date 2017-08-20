@@ -1,0 +1,181 @@
+/**
+ * @author      OA Wu <comdan66@gmail.com>
+ * @copyright   Copyright (c) 2016 OA Wu Design
+ */
+
+@import "_oa";
+.items {
+  background-color: rgba(24, 96, 165, 1.00);
+  > a {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    text-align: left;
+    font-weight: bold;
+    font-size: 16px;
+    @include range-width(0, 700px){
+      text-align: center;
+    }
+    
+    &:hover, &.active {
+      background-color: rgba(72, 147, 219, 1.00);
+    }
+  }
+}
+
+.banner {
+  position: relative;
+  display: inline-block;
+  width: calc(100% - 16px);
+  margin-left: 16px;
+  margin-top: 16px;
+  height: 300px;
+  @include range-width(0, 700px) {
+    width: 100%;
+    margin-left: 0;
+  };
+  > * {
+    color: white;
+    display: inline-block;
+    width: 100%;
+  }
+  > div {
+    font-size: 30px;
+    margin-top: 90px;
+    font-weight: bold;
+  }
+  > span {
+    font-size: 16px;
+    margin-top: 4px;
+  }
+}
+.b2 {
+  position: relative;
+  display: inline-block;
+  width: calc(100% - 16px);
+  margin-left: 16px;
+  margin-top: 32px;
+  @include range-width(0, 700px) {
+    width: 100%;
+    margin-left: 0;
+  };
+  > * {
+    display: inline-block;
+    width: 100%;
+  }
+  > div {
+    font-size: 30px;
+    color: rgba(34, 114, 184, 1.00);
+    font-weight: bold;
+  }
+  > span {
+    font-size: 16px;
+    margin-top: 16px;
+    text-align: left;
+    color: rgba(119, 128, 136, 1.00);
+  }
+}
+.ms {
+  position: relative;
+  display: inline-block;
+  width: calc(100% - 16px);
+  margin-left: 16px;
+  margin-top: 48px;
+  @include clearfix();
+  @include range-width(0, 700px) {
+    width: 100%;
+    margin-left: 0;
+  };
+  > * {
+    float: left;
+    position: relative;
+    display: inline-block;
+  
+    @include range-width(0, 450px) {
+      width: 100%;
+      + * {
+        margin-top: 16px;
+      }
+    }
+    @include range-width(450px, 1000px) {
+      width: calc(100% / 2 - 20px * 1 / 2);
+      &:nth-child(2n + 2) {
+        margin-left: 20px;
+      }
+      &:nth-child(n + 3) {
+        margin-top: 20px;
+      }
+    };
+    @include range-width(1000px) {
+      width: calc(100% / 3 - 20px * 2 / 3);
+
+      &:nth-child(3n + 2) {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+      &:nth-child(n + 4) {
+        margin-top: 20px;
+      }
+    };
+    height: 340px;
+    word-break: break-all;
+    text-align: left;
+    text-decoration: none;
+    overflow: hidden;
+    @include border-radius(3px);
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border: 1px solid rgba(0, 0, 0, .2);
+      @include border-radius(3px);
+    }
+    div {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      height: 240px;
+      overflow: hidden;
+      img {
+        width: 100%;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, .2);
+      }
+    }
+    b {
+      display: inline-block;
+      width: 100%;
+      height: 45px;
+      line-height: 45px;
+      color: rgba(30, 106, 172, 1.00);
+      font-size: 16px;
+      padding: 0 16px;
+      @include overflow-docx3();
+    }
+    span {
+      display: inline-block;
+      width: 100%;
+      color: rgba(98, 105, 106, 1.00);
+      font-size: 14px;
+      line-height: 20px;
+      height: 20px * 2;
+      overflow: hidden;
+      padding: 0 16px;
+    }
+  }
+
+}

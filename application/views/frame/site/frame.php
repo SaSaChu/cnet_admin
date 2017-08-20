@@ -46,6 +46,7 @@
             <a<?php echo isset ($now) && $now && $now == 'index' ? ' class="active"' : '';?> href='<?php echo base_url ();?>'><?php echo Lang::get ('frame', 'pages', 'index');?></a>
             <a<?php echo isset ($now) && $now && $now == 'about' ? ' class="active"' : '';?> href='<?php echo base_url ('about');?>'><?php echo Lang::get ('frame', 'pages', 'about');?></a>
             <a<?php echo isset ($now) && $now && $now == 'news' ? ' class="active"' : '';?> href='<?php echo base_url ('news-list');?>'><?php echo Lang::get ('frame', 'pages', 'news');?></a>
+            <a<?php echo isset ($now) && $now && $now == 'smbs' ? ' class="active"' : '';?> href='<?php echo base_url ('smbs');?>'><?php echo Lang::get ('frame', 'pages', 'smb');?></a>
             <a<?php echo isset ($now) && $now && $now == 'support' ? ' class="active"' : '';?> href='<?php echo base_url ('support');?>'><?php echo Lang::get ('frame', 'pages', 'support');?></a>
             <a<?php echo isset ($now) && $now && $now == 'product' ? ' class="active"' : '';?> href='<?php echo base_url ('products');?>'><?php echo Lang::get ('frame', 'pages', 'product');?></a>
             <a<?php echo isset ($now) && $now && $now == 'partner' ? ' class="active"' : '';?> href='<?php echo base_url ('partners');?>'><?php echo Lang::get ('frame', 'pages', 'partner');?></a>

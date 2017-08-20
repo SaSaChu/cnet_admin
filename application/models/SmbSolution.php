@@ -34,4 +34,7 @@ class SmbSolution extends OaModel {
   public function destroy () {
     return $this->delete ();
   }
+  public function url () {
+    return base_url ('solutions', $this->id);
+  }
 }

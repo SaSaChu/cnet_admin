@@ -19,6 +19,7 @@ Route::get ('/lang/(:any)', 'main@lang($1)');
 Route::get ('/news/(:num)', 'blogs@show($1)');
 Route::get ('/products/(:num)/(:num)', 'products@index($1, $2)');
 Route::get ('/product/(:num)', 'products@show($1)');
+Route::get ('/solutions/(:num)', 'smbs@show($1)');
 
 Route::resourcePagination (array ('news-list'), 'blogs');
 Route::resourcePagination (array ('news_list'), 'blogs');
