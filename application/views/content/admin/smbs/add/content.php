@@ -27,7 +27,7 @@
     <div class='row n2'>
       <label>* 副標題1</label>
       <div>
-        <input type='text' name='sub_title1' value='<?php echo isset ($posts['sub_title1']) ? $posts['sub_title1'] : '';?>' placeholder='請輸入副標題1..' maxlength='200' pattern='.{1,200}' required title='輸入副標題1!' />
+        <textarea name='content' class='pure autosize' placeholder='請輸入副標題1..'><?php echo isset ($posts['sub_title1']) ? $posts['sub_title1'] : '';?></textarea>
       </div>
     </div>
 
@@ -41,7 +41,7 @@
     <div class='row n2'>
       <label>* 副標題2</label>
       <div>
-        <input type='text' name='sub_title2' value='<?php echo isset ($posts['sub_title2']) ? $posts['sub_title2'] : '';?>' placeholder='請輸入副標題2..' pattern='.{1,}' required title='輸入副標題2!' />
+        <textarea name='sub_title2' class='pure autosize' placeholder='請輸入副標題2..'><?php echo isset ($posts['sub_title2']) ? $posts['sub_title2'] : '';?></textarea>
       </div>
     </div>
 
