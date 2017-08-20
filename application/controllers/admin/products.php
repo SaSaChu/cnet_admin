@@ -22,6 +22,9 @@ class Products extends Admin_controller {
 
     $this->add_param ('uri_1', $this->uri_1)
          ->add_param ('now_url', base_url ($this->uri_1));
+         
+    if (in_array ($this->uri->rsegments (2, 0), array ('create', 'update')))
+      error_reporting (E_ALL & ~E_NOTICE & ~E_WARNING);
   }
   public function index ($offset = 0) {
     $columns = array ( 

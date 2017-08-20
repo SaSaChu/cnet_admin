@@ -23,4 +23,15 @@ class SmbSolution extends OaModel {
 
     OrmImageUploader::bind ('cover', 'SmbSolutionCoverImageUploader');
   }
+  public function mini_title ($length = 50) {
+    if (!isset ($this->title)) return '';
+    return $length ? mb_strimwidth (remove_ckedit_tag ($this->title), 0, $length, '…','UTF-8') : remove_ckedit_tag ($this->title);
+  }
+  public function mini_content ($length = 100) {
+    if (!isset ($this->content)) return '';
+    return $length ? mb_strimwidth (remove_ckedit_tag ($this->content), 0, $length, '…','UTF-8') : remove_ckedit_tag ($this->content);
+  }
+  public function destroy () {
+    return $this->delete ();
+  }
 }
