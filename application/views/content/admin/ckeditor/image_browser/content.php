@@ -10,8 +10,8 @@
   <?php
   foreach ($objs as $obj) {
     if ($obj instanceof CkeditorImage) { ?>
-      <div class='img' data-url='<?php echo $obj->name->url ('400h');?>'>
-        <img src='<?php echo $obj->name->url ('400h');?>'>
+      <div class='img' data-url='<?php echo $obj->name->url ();?>'>
+        <img src='<?php echo $obj->name->url ();?>'>
         <time datetime='<?php echo $obj->created_at->format ('Y-m-d H:i:s');?>'><?php echo $obj->created_at->format ('Y-m-d H:i:s');?></span>
       </div>
   <?php
