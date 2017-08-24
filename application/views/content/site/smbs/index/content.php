@@ -31,7 +31,7 @@
           <a href='<?php echo $solution->url ();?>'>
             <div class='ic'><img src='<?php echo $solution->cover->url ();?>' /></div>
             <b><?php echo $solution->mini_title ();?></b>
-            <span><?php echo $solution->mini_content ();?></span>
+            <span><?php echo $solution->sub_title;?></span>
           </a>
   <?php } ?>
       </div>
