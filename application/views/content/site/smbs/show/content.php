@@ -15,7 +15,9 @@
       <img src='<?php echo base_url ('resource', 'image', 'cnetflag.png');?>'>
     </div>
     <div class='right'>
-
+      <div class='title'><?php echo $obj->title;?></div>
+      <div class='sub_title'><?php echo $obj->sub_title;?></div>
+      <div class='content'><?php echo $obj->content;?></div>
     </div>
   </div>
 </div>
