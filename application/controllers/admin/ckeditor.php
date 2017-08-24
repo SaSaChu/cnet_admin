@@ -11,7 +11,7 @@ class Ckeditor extends Admin_controller {
   public function image_browser ($type = 'cke', $offset = 0) {
     $gets = http_build_query (OAInput::get ());
     
-    $types = array ('cke' => '上傳紀錄', 'imb' => '我的圖庫');
+    $types = array ('cke' => '上傳紀錄');
 
     $uri_1 = 'admin/ckeditor/image_browser';
 

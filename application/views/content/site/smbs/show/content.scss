@@ -32,6 +32,9 @@
   text-align: left;
   padding-left: 32px;
   word-break: break-all;
+  @include range-width(0, 700px) {
+    padding-left: 0;
+  };
 }
 .title {
   font-size: 32px;
