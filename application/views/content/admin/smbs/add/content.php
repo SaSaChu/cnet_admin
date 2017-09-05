@@ -27,7 +27,7 @@
     <div class='row n2'>
       <label>* 副標題1</label>
       <div>
-        <textarea name='content' class='pure autosize' placeholder='請輸入副標題1..'><?php echo isset ($posts['sub_title1']) ? $posts['sub_title1'] : '';?></textarea>
+        <textarea name='sub_title1' class='pure autosize' placeholder='請輸入副標題1..'><?php echo isset ($posts['sub_title1']) ? $posts['sub_title1'] : '';?></textarea>
       </div>
     </div>
 
