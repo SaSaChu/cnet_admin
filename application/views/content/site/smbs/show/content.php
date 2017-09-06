@@ -1,6 +1,6 @@
 <nav id='nav'>
   <div class='container'>
-    <h1><?php echo Lang::get ('support', 'title');?></h1>
+    <h1><?php echo Lang::get ('smbs', 'title');?></h1>
   </div>
 </nav>
 
